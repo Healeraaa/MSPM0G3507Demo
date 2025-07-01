@@ -1,0 +1,546 @@
+{
+  "name": "gpio_toggle_output_LP_MSPM0G3507_nortos_keil",
+  "type": "ARM",
+  "dependenceList": [],
+  "srcDirs": [],
+  "virtualFolder": {
+    "name": "<virtual_root>",
+    "files": [],
+    "folders": [
+      {
+        "name": "Application",
+        "files": [],
+        "folders": [
+          {
+            "name": "MDK-ARM",
+            "files": [
+              {
+                "path": "../gpio_toggle_output.syscfg"
+              },
+              {
+                "path": "startup_mspm0g350x_uvision.s"
+              }
+            ],
+            "folders": []
+          },
+          {
+            "name": "User",
+            "files": [],
+            "folders": [
+              {
+                "name": "Core",
+                "files": [
+                  {
+                    "path": "../Core/Src/main.c"
+                  },
+                  {
+                    "path": "../Core/Src/ti_msp_dl_config.c"
+                  }
+                ],
+                "folders": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Drivers",
+        "files": [
+          {
+            "path": "../Drivers/dl_adc12.c"
+          },
+          {
+            "path": "../Drivers/dl_aes.c"
+          },
+          {
+            "path": "../Drivers/dl_aesadv.c"
+          },
+          {
+            "path": "../Drivers/dl_common.c"
+          },
+          {
+            "path": "../Drivers/dl_comp.c"
+          },
+          {
+            "path": "../Drivers/dl_crc.c"
+          },
+          {
+            "path": "../Drivers/dl_crcp.c"
+          },
+          {
+            "path": "../Drivers/dl_dac12.c"
+          },
+          {
+            "path": "../Drivers/dl_dma.c"
+          },
+          {
+            "path": "../Drivers/dl_flashctl.c"
+          },
+          {
+            "path": "../Drivers/dl_gpamp.c"
+          },
+          {
+            "path": "../Drivers/dl_gpio.c"
+          },
+          {
+            "path": "../Drivers/dl_i2c.c"
+          },
+          {
+            "path": "../Drivers/dl_iwdt.c"
+          },
+          {
+            "path": "../Drivers/dl_keystorectl.c"
+          },
+          {
+            "path": "../Drivers/dl_lcd.c"
+          },
+          {
+            "path": "../Drivers/dl_lfss.c"
+          },
+          {
+            "path": "../Drivers/dl_mathacl.c"
+          },
+          {
+            "path": "../Drivers/dl_mcan.c"
+          },
+          {
+            "path": "../Drivers/dl_opa.c"
+          },
+          {
+            "path": "../Drivers/dl_rtc.c"
+          },
+          {
+            "path": "../Drivers/dl_rtc_a.c"
+          },
+          {
+            "path": "../Drivers/dl_rtc_b.c"
+          },
+          {
+            "path": "../Drivers/dl_rtc_common.c"
+          },
+          {
+            "path": "../Drivers/dl_scratchpad.c"
+          },
+          {
+            "path": "../Drivers/dl_spi.c"
+          },
+          {
+            "path": "../Drivers/dl_tamperio.c"
+          },
+          {
+            "path": "../Drivers/dl_timer.c"
+          },
+          {
+            "path": "../Drivers/dl_timera.c"
+          },
+          {
+            "path": "../Drivers/dl_timerg.c"
+          },
+          {
+            "path": "../Drivers/dl_trng.c"
+          },
+          {
+            "path": "../Drivers/dl_uart.c"
+          },
+          {
+            "path": "../Drivers/dl_vref.c"
+          },
+          {
+            "path": "../Drivers/dl_wwdt.c"
+          }
+        ],
+        "folders": []
+      },
+      {
+        "name": "BSP",
+        "files": [
+          {
+            "path": "../BSP/LED.c"
+          },
+          {
+            "path": "../BSP/LED.h"
+          }
+        ],
+        "folders": []
+      },
+      {
+        "name": "SYSTEM",
+        "files": [],
+        "folders": []
+      }
+    ]
+  },
+  "outDir": "build",
+  "deviceName": null,
+  "packDir": null,
+  "miscInfo": {
+    "uid": "0c1ed27e2b708298409adfae8566cb2e"
+  },
+  "targets": {
+    "gpio_toggle_output_LP_MSPM0G3507_nortos_keil": {
+      "excludeList": [],
+      "toolchain": "AC6",
+      "compileConfig": {
+        "cpuType": "Cortex-M0+",
+        "floatingPointHardware": "none",
+        "scatterFilePath": "mspm0g3507.sct",
+        "useCustomScatterFile": true,
+        "storageLayout": {
+          "RAM": [
+            {
+              "tag": "RAM",
+              "id": 1,
+              "mem": {
+                "startAddr": "0x20200000",
+                "size": "0x8000"
+              },
+              "isChecked": false,
+              "noInit": false
+            },
+            {
+              "tag": "RAM",
+              "id": 2,
+              "mem": {
+                "startAddr": "0x20300000",
+                "size": "0x8000"
+              },
+              "isChecked": false,
+              "noInit": false
+            },
+            {
+              "tag": "RAM",
+              "id": 3,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "noInit": false
+            },
+            {
+              "tag": "IRAM",
+              "id": 1,
+              "mem": {
+                "startAddr": "0x20000000",
+                "size": "0x8000"
+              },
+              "isChecked": false,
+              "noInit": false
+            },
+            {
+              "tag": "IRAM",
+              "id": 2,
+              "mem": {
+                "startAddr": "0x20100000",
+                "size": "0x8000"
+              },
+              "isChecked": false,
+              "noInit": false
+            }
+          ],
+          "ROM": [
+            {
+              "tag": "ROM",
+              "id": 1,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "isStartup": true
+            },
+            {
+              "tag": "ROM",
+              "id": 2,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "isStartup": false
+            },
+            {
+              "tag": "ROM",
+              "id": 3,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "isStartup": false
+            },
+            {
+              "tag": "IROM",
+              "id": 1,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x20000"
+              },
+              "isChecked": false,
+              "isStartup": false
+            },
+            {
+              "tag": "IROM",
+              "id": 2,
+              "mem": {
+                "startAddr": "0x400000",
+                "size": "0x20000"
+              },
+              "isChecked": false,
+              "isStartup": false
+            }
+          ]
+        },
+        "options": "null"
+      },
+      "uploader": "JLink",
+      "uploadConfig": {
+        "bin": "",
+        "baseAddr": "",
+        "cpuInfo": {
+          "vendor": "null",
+          "cpuName": "null"
+        },
+        "proType": 1,
+        "speed": 8000,
+        "otherCmds": ""
+      },
+      "uploadConfigMap": {},
+      "custom_dep": {
+        "name": "default",
+        "incList": [
+          "D:/ti/mspm0_sdk_2_05_00_05/source/third_party/CMSIS/Core/Include",
+          "D:/ti/mspm0_sdk_2_05_00_05/source",
+          ".cmsis/include",
+          "RTE/_gpio_toggle_output_LP_MSPM0G3507_nortos_keil"
+        ],
+        "libList": [],
+        "defineList": [
+          "__MSPM0G3507__"
+        ]
+      },
+      "builderOptions": {
+        "AC6": {
+          "version": 3,
+          "beforeBuildTasks": [
+            {
+              "name": "cmd.exe /C \"D:\\ti\\mspm0_sdk_2_05_00_05\\tools\\keil_myproject\\syscfg.bat $P gpio_toggle_output.syscfg\"",
+              "command": "cmd.exe /C \"D:\\ti\\mspm0_sdk_2_05_00_05\\tools\\keil_myproject\\syscfg.bat $P gpio_toggle_output.syscfg\"",
+              "disable": false,
+              "abortAfterFailed": true,
+              "stopBuildAfterFailed": true
+            }
+          ],
+          "afterBuildTasks": [],
+          "global": {
+            "use-microLIB": false,
+            "output-debug-info": "enable"
+          },
+          "c/cpp-compiler": {
+            "optimization": "level-2",
+            "language-c": "c99",
+            "language-cpp": "c++11",
+            "link-time-optimization": false,
+            "one-elf-section-per-function": true,
+            "short-enums#wchar": true,
+            "warnings": "misra-compatible"
+          },
+          "asm-compiler": {
+            "$use": "asm-auto"
+          },
+          "linker": {
+            "output-format": "elf",
+            "misc-controls": "D:\\ti\\mspm0_sdk_2_05_00_05\\source\\ti\\driverlib\\lib\\keil\\m0p\\mspm0g1x0x_g3x0x\\driverlib.a",
+            "xo-base": "",
+            "ro-base": "",
+            "rw-base": ""
+          }
+        }
+      }
+    },
+    "Project": {
+      "excludeList": [],
+      "toolchain": "AC6",
+      "compileConfig": {
+        "cpuType": "Cortex-M0+",
+        "floatingPointHardware": "none",
+        "scatterFilePath": "mspm0g3507.sct",
+        "useCustomScatterFile": true,
+        "storageLayout": {
+          "RAM": [
+            {
+              "tag": "RAM",
+              "id": 1,
+              "mem": {
+                "startAddr": "0x20200000",
+                "size": "0x8000"
+              },
+              "isChecked": false,
+              "noInit": false
+            },
+            {
+              "tag": "RAM",
+              "id": 2,
+              "mem": {
+                "startAddr": "0x20300000",
+                "size": "0x8000"
+              },
+              "isChecked": false,
+              "noInit": false
+            },
+            {
+              "tag": "RAM",
+              "id": 3,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "noInit": false
+            },
+            {
+              "tag": "IRAM",
+              "id": 1,
+              "mem": {
+                "startAddr": "0x20000000",
+                "size": "0x8000"
+              },
+              "isChecked": false,
+              "noInit": false
+            },
+            {
+              "tag": "IRAM",
+              "id": 2,
+              "mem": {
+                "startAddr": "0x20100000",
+                "size": "0x8000"
+              },
+              "isChecked": false,
+              "noInit": false
+            }
+          ],
+          "ROM": [
+            {
+              "tag": "ROM",
+              "id": 1,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "isStartup": true
+            },
+            {
+              "tag": "ROM",
+              "id": 2,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "isStartup": false
+            },
+            {
+              "tag": "ROM",
+              "id": 3,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "isStartup": false
+            },
+            {
+              "tag": "IROM",
+              "id": 1,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x20000"
+              },
+              "isChecked": false,
+              "isStartup": false
+            },
+            {
+              "tag": "IROM",
+              "id": 2,
+              "mem": {
+                "startAddr": "0x400000",
+                "size": "0x20000"
+              },
+              "isChecked": false,
+              "isStartup": false
+            }
+          ]
+        },
+        "options": "null"
+      },
+      "uploader": "JLink",
+      "uploadConfig": {
+        "bin": "",
+        "baseAddr": "",
+        "cpuInfo": {
+          "vendor": "null",
+          "cpuName": "null"
+        },
+        "proType": 1,
+        "speed": 8000,
+        "otherCmds": ""
+      },
+      "uploadConfigMap": {},
+      "custom_dep": {
+        "name": "default",
+        "incList": [
+          "D:/ti/mspm0_sdk_2_05_00_05/source/third_party/CMSIS/Core/Include",
+          "D:/ti/mspm0_sdk_2_05_00_05/source",
+          "../Core/Inc",
+          "../Core/Src",
+          "../BSP",
+          "RTE/_Project"
+        ],
+        "libList": [],
+        "defineList": [
+          "__MSPM0G3507__"
+        ]
+      },
+      "builderOptions": {
+        "AC6": {
+          "version": 3,
+          "beforeBuildTasks": [
+            {
+              "name": "cmd.exe /C \"D:\\ti\\mspm0_sdk_2_05_00_05\\tools\\keil_myproject\\syscfg.bat $P gpio_toggle_output.syscfg\"",
+              "command": "cmd.exe /C \"D:\\ti\\mspm0_sdk_2_05_00_05\\tools\\keil_myproject\\syscfg.bat $P gpio_toggle_output.syscfg\"",
+              "disable": false,
+              "abortAfterFailed": true,
+              "stopBuildAfterFailed": true
+            }
+          ],
+          "afterBuildTasks": [],
+          "global": {
+            "use-microLIB": false,
+            "output-debug-info": "enable"
+          },
+          "c/cpp-compiler": {
+            "optimization": "level-2",
+            "language-c": "c99",
+            "language-cpp": "c++11",
+            "link-time-optimization": false,
+            "one-elf-section-per-function": true,
+            "short-enums#wchar": true,
+            "warnings": "misra-compatible"
+          },
+          "asm-compiler": {
+            "$use": "asm-auto"
+          },
+          "linker": {
+            "output-format": "elf",
+            "misc-controls": "D:\\ti\\mspm0_sdk_2_05_00_05\\source\\ti\\driverlib\\lib\\keil\\m0p\\mspm0g1x0x_g3x0x\\driverlib.a",
+            "xo-base": "",
+            "ro-base": "",
+            "rw-base": ""
+          }
+        }
+      }
+    }
+  },
+  "version": "3.5"
+}
