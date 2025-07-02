@@ -159,6 +159,12 @@
           },
           {
             "path": "../BSP/LED.h"
+          },
+          {
+            "path": "../BSP/Key.c"
+          },
+          {
+            "path": "../BSP/Key.h"
           }
         ],
         "folders": []

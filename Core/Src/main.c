@@ -1,6 +1,7 @@
 #include "ti_msp_dl_config.h"
 #include "LED.h"
 #include "Key.h"
+#include "WDT.h"
 /* This results in approximately 0.5s of delay assuming 32MHz CPU_CLK */
 #define DELAY (16000000)
 
@@ -11,19 +12,56 @@ int main(void)
     SYSCFG_DL_init();
     LED_Init();
     Key_Init();
-    LED_ON();
+    WDT_init();
+    delay_cycles(1600000);
 
-    while (1) 
+    while (1)
     {
         Key_Num = Key_GetNum();
-        if(Key_Num == 1)
+        if (Key_Num == 1)
         {
-            LED_ON();
+            LED2_ON();
+        }
+        else if (Key_Num == 2)
+        {
+            LED3_ON();
+        }
+        else if (Key_Num == 3)
+        {
+            LED4_ON();
+        }
+        else if (Key_Num == 4)
+        {
+            LED2_ON();
+            LED3_ON();
+        }
+        else if (Key_Num == 5)
+        {
+            LED3_ON();
+            LED4_ON();
         }
         else
         {
-            LED_OFF();
+            LED2_OFF();
+            LED3_OFF();
+            LED4_OFF();
         }
-        // delay_cycles(DELAY);
+        delay_cycles(1600000);
+    }
+}
+
+
+void GROUP0_IRQHandler(void)
+{
+    switch (DL_Interrupt_getPendingGroup(DL_INTERRUPT_GROUP_0))
+    {
+    case DL_INTERRUPT_GROUP0_IIDX_WWDT0:
+        if (DL_WWDT_getPendingInterrupt(WWDT0))
+        {
+            Key_Update(); // 在看门狗中断里定期调用
+            DL_WWDT_clearInterruptStatus(WWDT0);//清除中断标志位
+        }
+    default:
+        break;
     }
 }
