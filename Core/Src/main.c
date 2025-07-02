@@ -2,6 +2,7 @@
 #include "LED.h"
 #include "Key.h"
 #include "WDT.h"
+#include "OLED.h"
 /* This results in approximately 0.5s of delay assuming 32MHz CPU_CLK */
 #define DELAY (16000000)
 
@@ -13,41 +14,44 @@ int main(void)
     LED_Init();
     Key_Init();
     WDT_init();
+    OLED_Init();
     delay_cycles(1600000);
-
+    OLED_ShowString(1,1,"Hello");
     while (1)
     {
-        Key_Num = Key_GetNum();
-        if (Key_Num == 1)
-        {
-            LED2_ON();
-        }
-        else if (Key_Num == 2)
-        {
-            LED3_ON();
-        }
-        else if (Key_Num == 3)
-        {
-            LED4_ON();
-        }
-        else if (Key_Num == 4)
-        {
-            LED2_ON();
-            LED3_ON();
-        }
-        else if (Key_Num == 5)
-        {
-            LED3_ON();
-            LED4_ON();
-        }
-        else
-        {
-            LED2_OFF();
-            LED3_OFF();
-            LED4_OFF();
-        }
+        OLED_ShowString(1,1,"Hello");
+        // Key_Num = Key_GetNum();
+        // if (Key_Num == 1)
+        // {
+        //     LED2_ON();
+        // }
+        // else if (Key_Num == 2)
+        // {
+        //     LED3_ON();
+        // }
+        // else if (Key_Num == 3)
+        // {
+        //     LED4_ON();
+        // }
+        // else if (Key_Num == 4)
+        // {
+        //     LED2_ON();
+        //     LED3_ON();
+        // }
+        // else if (Key_Num == 5)
+        // {
+        //     LED3_ON();
+        //     LED4_ON();
+        // }
+        // else
+        // {
+        //     LED2_OFF();
+        //     LED3_OFF();
+        //     LED4_OFF();
+        // }
         delay_cycles(1600000);
     }
+
 }
 
 
