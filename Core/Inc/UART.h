@@ -1,0 +1,32 @@
+#ifndef __UART_H
+#define __UART_H
+
+#define UART_0_INST UART0 // 使用 UART0 实例
+#define UART_0_INST_FREQUENCY 40000000 // 串口模块时钟频率为 40MHz
+#define UART_0_INST_IRQHandler UART0_IRQHandler // 中断服务函数名称
+#define UART_0_INST_INT_IRQN UART0_INT_IRQn // 中断向量号
+
+// UART0 的 RX/TX 引脚配置
+#define GPIO_UART_0_RX_PORT GPIOA
+#define GPIO_UART_0_TX_PORT GPIOA
+#define GPIO_UART_0_RX_PIN DL_GPIO_PIN_1
+#define GPIO_UART_0_TX_PIN DL_GPIO_PIN_0
+
+#define GPIO_UART_0_IOMUX_RX (IOMUX_PINCM2)
+#define GPIO_UART_0_IOMUX_TX (IOMUX_PINCM1)
+
+// 引脚复用功能定义
+#define GPIO_UART_0_IOMUX_RX_FUNC IOMUX_PINCM2_PF_UART0_RX
+#define GPIO_UART_0_IOMUX_TX_FUNC IOMUX_PINCM1_PF_UART0_TX
+
+// 波特率与波特率分频配置（IBRD 和 FBRD）
+#define UART_0_BAUD_RATE (115200)
+#define UART_0_IBRD_40_MHZ_115200_BAUD (21)
+#define UART_0_FBRD_40_MHZ_115200_BAUD (45)
+
+
+void UART0_init(void);
+
+#endif
+
+

@@ -35,6 +35,12 @@
                   },
                   {
                     "path": "../Core/Src/ti_msp_dl_config.c"
+                  },
+                  {
+                    "path": "../Core/Src/WDT.c"
+                  },
+                  {
+                    "path": "../Core/Src/UART.c"
                   }
                 ],
                 "folders": []
@@ -165,13 +171,26 @@
           },
           {
             "path": "../BSP/Key.h"
+          },
+          {
+            "path": "../BSP/OLED.c"
+          },
+          {
+            "path": "../BSP/OLED_Font.h"
           }
         ],
         "folders": []
       },
       {
         "name": "SYSTEM",
-        "files": [],
+        "files": [
+          {
+            "path": "../SYSTEM/Delay.c"
+          },
+          {
+            "path": "../SYSTEM/SysClock.c"
+          }
+        ],
         "folders": []
       }
     ]
@@ -501,6 +520,7 @@
           "../Core/Inc",
           "../Core/Src",
           "../BSP",
+          "../SYSTEM",
           "RTE/_Project"
         ],
         "libList": [],

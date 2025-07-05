@@ -1,11 +1,10 @@
 #include "ti_msp_dl_config.h"
 #include "WDT.h"
+#include "Delay.h"
 
 void WDT_init(void)
 {
-  DL_WWDT_reset(WWDT0);       // 复位窗口看门狗 WWDT0 模块
-  DL_WWDT_enablePower(WWDT0); // 启用 WWDT0 电源
-  delay_cycles(POWER_STARTUP_DELAY);
+
 
   /*
    * 初始化 WWDT0 的 Interval Timer 模式，设置如下：

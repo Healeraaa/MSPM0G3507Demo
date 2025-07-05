@@ -1,5 +1,6 @@
 #include "ti_msp_dl_config.h"
 #include "Key.h"
+#include "Delay.h"
 
 static KeyInfo Keys[KEY_NUM] = {
 	{KEY_STATE_IDLE, 0, 0, IOMUX_PINCM26, GPIOB, DL_GPIO_PIN_9},
@@ -16,6 +17,11 @@ static KeyInfo Keys[KEY_NUM] = {
  */
 void Key_GPIO_Init(void)
 {
+	// DL_GPIO_reset(GPIOA);
+	// DL_GPIO_reset(GPIOB);
+	// DL_GPIO_enablePower(GPIOA);
+	// DL_GPIO_enablePower(GPIOB);
+	// Power_Delay();
 	for (int i = 0; i < KEY_NUM; i++)
 	{
 		DL_GPIO_initDigitalInputFeatures(

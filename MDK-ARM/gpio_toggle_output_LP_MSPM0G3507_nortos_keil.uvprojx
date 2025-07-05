@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>__MSPM0G3507__</Define>
               <Undefine></Undefine>
-              <IncludePath>D:\ti\mspm0_sdk_2_05_00_05\source\third_party\CMSIS\Core\Include;D:\ti\mspm0_sdk_2_05_00_05\source;..\Core\Inc;..\Core\Src;..\BSP</IncludePath>
+              <IncludePath>D:\ti\mspm0_sdk_2_05_00_05\source\third_party\CMSIS\Core\Include;D:\ti\mspm0_sdk_2_05_00_05\source;..\Core\Inc;..\Core\Src;..\BSP;..\SYSTEM</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -413,6 +413,11 @@
               <FileName>WDT.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Core\Src\WDT.c</FilePath>
+            </File>
+            <File>
+              <FileName>UART.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\UART.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -628,6 +633,18 @@
         </Group>
         <Group>
           <GroupName>SYSTEM</GroupName>
+          <Files>
+            <File>
+              <FileName>Delay.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SYSTEM\Delay.c</FilePath>
+            </File>
+            <File>
+              <FileName>SysClock.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SYSTEM\SysClock.c</FilePath>
+            </File>
+          </Files>
         </Group>
       </Groups>
     </Target>

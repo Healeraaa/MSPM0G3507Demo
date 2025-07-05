@@ -1,5 +1,6 @@
 #include "ti_msp_dl_config.h"
 #include "LED.h"
+#include "Delay.h"
 
 /**
   * 函    数：LED初始化
@@ -8,6 +9,9 @@
   */
 void LED_Init(void)
 {
+  // DL_GPIO_reset(LED_PORT);
+  // DL_GPIO_enablePower(LED_PORT);
+  // Power_Delay();
 	// 配置为 GPIO 输出模式
 	DL_GPIO_initDigitalOutput(LED2_IOMUX);
   DL_GPIO_initDigitalOutput(LED3_IOMUX);
@@ -31,7 +35,7 @@ void LED2_ON(void)
 
 /**
   * 函    数：LED1关闭
-  * 参    数：无
+  * 参    数：无·
   * 返 回 值：无
   */
 void LED2_OFF(void)
@@ -44,7 +48,7 @@ void LED2_OFF(void)
   * 参    数：无
   * 返 回 值：无
   */
-void LED2_Turn(void)
+void LED2_Turn(void)	
 {
 	DL_GPIO_togglePins(LED_PORT, LED2_PIN );
 }

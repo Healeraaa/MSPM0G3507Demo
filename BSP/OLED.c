@@ -1,5 +1,6 @@
 #include "ti_msp_dl_config.h"
 #include "OLED_Font.h"
+#include "Delay.h"
 
 #define OLED_PORT (GPIOA)
 
@@ -19,7 +20,7 @@ void OLED_W_SCL(uint8_t data)
 	{
 		DL_GPIO_clearPins(OLED_PORT, OLED_SCL_PIN);
 	}
-	delay_cycles(32);
+	Delay_us(1);
 }
 
 void OLED_W_SDA(uint8_t data)
@@ -32,15 +33,15 @@ void OLED_W_SDA(uint8_t data)
 	{
 		DL_GPIO_clearPins(OLED_PORT, OLED_SDA_PIN);
 	}
-	delay_cycles(32);
+	Delay_us(1);
 }
 
 /*引脚初始化*/
 void OLED_I2C_Init(void)
 {
-	DL_GPIO_reset(OLED_PORT);
-	DL_GPIO_enablePower(OLED_PORT);
-	delay_cycles(POWER_STARTUP_DELAY);
+	// DL_GPIO_reset(OLED_PORT);
+	// DL_GPIO_enablePower(OLED_PORT);
+	// Power_Delay();
 
 	DL_GPIO_initDigitalOutput(OLED_SDA_IOMUX);
 	DL_GPIO_initDigitalOutput(OLED_SCL_IOMUX);
@@ -48,7 +49,6 @@ void OLED_I2C_Init(void)
 	DL_GPIO_clearPins(OLED_PORT, OLED_SDA_PIN | OLED_SCL_PIN);
 	// 使能输出模式
 	DL_GPIO_enableOutput(OLED_PORT, OLED_SDA_PIN | OLED_SCL_PIN);
-
 	OLED_W_SCL(1);
 	OLED_W_SDA(1);
 }

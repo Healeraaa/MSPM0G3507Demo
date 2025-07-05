@@ -70,11 +70,11 @@ extern "C" {
 
 /* clang-format off */
 
-#define POWER_STARTUP_DELAY                                                (16)
+// #define POWER_STARTUP_DELAY                                                (16)
 
 
 
-#define CPUCLK_FREQ                                                     32000000
+// #define CPUCLK_FREQ                                                     80000000
 
 
 

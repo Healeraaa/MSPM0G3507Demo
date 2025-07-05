@@ -49,18 +49,22 @@ SYSCONFIG_WEAK void SYSCFG_DL_init(void)
     SYSCFG_DL_initPower();
     // SYSCFG_DL_GPIO_init();
     /* Module-Specific Initializations*/
-    SYSCFG_DL_SYSCTL_init();
+    // SYSCFG_DL_SYSCTL_init();
 }
 
 SYSCONFIG_WEAK void SYSCFG_DL_initPower(void)
 {
     DL_GPIO_reset(GPIOA);
     DL_GPIO_reset(GPIOB);
+    DL_WWDT_reset(WWDT0); // 复位窗口看门狗 WWDT0 模块
+    DL_UART_Main_reset(UART0);
 
     DL_GPIO_enablePower(GPIOA);
     DL_GPIO_enablePower(GPIOB);
+    DL_WWDT_enablePower(WWDT0); // 启用 WWDT0 电源
+    DL_UART_Main_enablePower(UART0);
 
-    delay_cycles(POWER_STARTUP_DELAY);
+    delay_cycles(16);
 }
 
 SYSCONFIG_WEAK void SYSCFG_DL_GPIO_init(void)
@@ -75,30 +79,23 @@ SYSCONFIG_WEAK void SYSCFG_DL_GPIO_init(void)
     DL_GPIO_initDigitalOutput(GPIO_LEDS_USER_TEST_IOMUX);
 
     DL_GPIO_clearPins(GPIO_LEDS_PORT, GPIO_LEDS_USER_LED_1_PIN |
-		GPIO_LEDS_USER_LED_2_PIN |
-		GPIO_LEDS_USER_LED_3_PIN |
-		GPIO_LEDS_USER_TEST_PIN);
+                                          GPIO_LEDS_USER_LED_2_PIN |
+                                          GPIO_LEDS_USER_LED_3_PIN |
+                                          GPIO_LEDS_USER_TEST_PIN);
     DL_GPIO_enableOutput(GPIO_LEDS_PORT, GPIO_LEDS_USER_LED_1_PIN |
-		GPIO_LEDS_USER_LED_2_PIN |
-		GPIO_LEDS_USER_LED_3_PIN |
-		GPIO_LEDS_USER_TEST_PIN);
-
+                                             GPIO_LEDS_USER_LED_2_PIN |
+                                             GPIO_LEDS_USER_LED_3_PIN |
+                                             GPIO_LEDS_USER_TEST_PIN);
 }
-
-
 
 SYSCONFIG_WEAK void SYSCFG_DL_SYSCTL_init(void)
 {
 
-	//Low Power Mode is configured to be SLEEP0
+    // Low Power Mode is configured to be SLEEP0
     DL_SYSCTL_setBORThreshold(DL_SYSCTL_BOR_THRESHOLD_LEVEL_0);
 
-    
-	DL_SYSCTL_setSYSOSCFreq(DL_SYSCTL_SYSOSC_FREQ_BASE);
-	/* Set default configuration */
-	DL_SYSCTL_disableHFXT();
-	DL_SYSCTL_disableSYSPLL();
-
+    DL_SYSCTL_setSYSOSCFreq(DL_SYSCTL_SYSOSC_FREQ_BASE);
+    /* Set default configuration */
+    DL_SYSCTL_disableHFXT();
+    DL_SYSCTL_disableSYSPLL();
 }
-
-

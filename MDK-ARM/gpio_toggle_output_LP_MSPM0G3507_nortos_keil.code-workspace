@@ -4,13 +4,6 @@
             "path": "."
         }
     ],
-    "settings": {
-        "files.associations": {
-            "ti_msp_dl_config.h": "c",
-            "wdt.h": "c",
-            "oled_font.h": "c",
-            "led.h": "c"
-        }
-    },
+    "settings": {},
     "extensions": {}
 }
