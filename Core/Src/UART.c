@@ -1,6 +1,10 @@
 #include "ti_msp_dl_config.h"
 #include "UART.h"
 #include "Delay.h"
+// #include <stdarg.h>
+#include <stdio.h>
+// #include <string.h>
+
 
 // 串口时钟配置结构体：使用 BUSCLK，分频为1
 static const DL_UART_Main_ClockConfig gUART_0ClockConfig = {
@@ -47,8 +51,10 @@ void UART0_init(void)
     NVIC_ClearPendingIRQ(UART_0_INST_INT_IRQN);
     NVIC_EnableIRQ(UART_0_INST_INT_IRQN);
 
-    
+}
 
 
-
+int fputc(int _c, FILE *_fp) {
+  DL_UART_Main_transmitDataBlocking(UART_0_INST, _c);
+  return _c;
 }

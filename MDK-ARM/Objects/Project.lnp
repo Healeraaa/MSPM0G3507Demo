@@ -43,7 +43,7 @@
 ".\objects\oled.o"
 ".\objects\delay.o"
 ".\objects\sysclock.o"
---strict --scatter "./mspm0g3507.sct"
+--library_type=microlib --strict --scatter "./mspm0g3507.sct"
 D:\ti\mspm0_sdk_2_05_00_05\source\ti\driverlib\lib\keil\m0p\mspm0g1x0x_g3x0x\driverlib.a --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
 --list ".\Project.map" -o .\Objects\Project.axf

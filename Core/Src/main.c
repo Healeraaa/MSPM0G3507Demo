@@ -1,4 +1,5 @@
 #include "ti_msp_dl_config.h"
+#include <stdio.h>
 #include "LED.h"
 #include "Key.h"
 #include "WDT.h"
@@ -55,12 +56,13 @@ int main(void)
         {
             LED2_OFF();
             LED3_OFF();
-            LED4_OFF();
+            LED4_OFF();         
         }
         // LED2_Turn();
         // LED3_Turn();
         // LED4_Turn();
         // DL_UART_Main_transmitData(UART_0_INST, 0xA5);
+        printf("Hello\r\n");
         Delay_ms(500);
     }
 }
