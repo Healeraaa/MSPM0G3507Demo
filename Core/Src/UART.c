@@ -44,8 +44,8 @@ void UART0_init(void)
 
     DL_UART_Main_enable(UART_0_INST); // 使能 UART
 
-    // NVIC_ClearPendingIRQ(UART_0_INST_INT_IRQN);
-    // NVIC_EnableIRQ(UART_0_INST_INT_IRQN);
+    NVIC_ClearPendingIRQ(UART_0_INST_INT_IRQN);
+    NVIC_EnableIRQ(UART_0_INST_INT_IRQN);
 
     
 

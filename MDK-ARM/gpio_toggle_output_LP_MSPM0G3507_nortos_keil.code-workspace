@@ -4,6 +4,10 @@
             "path": "."
         }
     ],
-    "settings": {},
+    "settings": {
+        "files.associations": {
+            "uart.h": "c"
+        }
+    },
     "extensions": {}
 }

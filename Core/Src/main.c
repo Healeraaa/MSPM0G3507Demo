@@ -39,14 +39,6 @@ int main(void)
         }
         else if (Key_Num == 3)
         {
-
-
-
-
-
-
-
-
             LED4_ON();
         }
         else if (Key_Num == 4)
@@ -68,7 +60,7 @@ int main(void)
         // LED2_Turn();
         // LED3_Turn();
         // LED4_Turn();
-        DL_UART_Main_transmitData(UART_0_INST, 0xA5);
+        // DL_UART_Main_transmitData(UART_0_INST, 0xA5);
         Delay_ms(500);
     }
 }
