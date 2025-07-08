@@ -70,7 +70,7 @@ extern "C" {
 
 /* clang-format off */
 
-// #define POWER_STARTUP_DELAY                                                (16)
+#define POWER_STARTUP_DELAY                                                (80)
 
 
 

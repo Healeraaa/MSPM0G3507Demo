@@ -2,7 +2,7 @@
 #include "Delay.h"
 #include "SysClock.h"
 
-#define POWER_STARTUP_DELAY                                                (16)
+
 
 /**
   * @brief  微秒级延时
@@ -44,7 +44,7 @@ void Delay_s(uint32_t xs)
 	}
 } 
 
-void Power_Delay(void)
-{
-	delay_cycles(POWER_STARTUP_DELAY);
-}
+// void Power_Delay(void)
+// {
+// 	delay_cycles(POWER_STARTUP_DELAY);
+// }

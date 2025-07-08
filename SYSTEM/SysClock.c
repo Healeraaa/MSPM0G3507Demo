@@ -18,9 +18,9 @@ static const DL_SYSCTL_SYSPLLConfig gSYSPLLConfig = {
 
 void SysClock_init(void)
 {
-  // DL_GPIO_reset(GPIOA);
-  // DL_GPIO_enablePower(GPIOA);
-  // Power_Delay();
+  DL_GPIO_reset(GPIOA);
+  DL_GPIO_enablePower(GPIOA);
+  delay_cycles(POWER_STARTUP_DELAY);
 
   // 配置高频晶振引脚为模拟功能
   DL_GPIO_initPeripheralAnalogFunction(GPIO_HFXIN_IOMUX);

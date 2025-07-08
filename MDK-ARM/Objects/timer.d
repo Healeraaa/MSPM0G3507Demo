@@ -1,4 +1,4 @@
-./objects/main.o: ..\Core\Src\main.c ..\Core\Inc\ti_msp_dl_config.h \
+./objects/timer.o: ..\Core\Src\Timer.c ..\Core\Inc\ti_msp_dl_config.h \
   D:\ti\mspm0_sdk_2_05_00_05\source\ti\devices\msp\msp.h \
   D:\ti\mspm0_sdk_2_05_00_05\source\ti\devices\DeviceFamily.h \
   D:\ti\mspm0_sdk_2_05_00_05\source\ti\devices\msp\m0p\mspm0g350x.h \
@@ -72,6 +72,4 @@
   D:\ti\mspm0_sdk_2_05_00_05\source\ti\driverlib\dl_wwdt.h \
   D:\ti\mspm0_sdk_2_05_00_05\source\ti\driverlib\m0p\dl_interrupt.h \
   D:\ti\mspm0_sdk_2_05_00_05\source\ti\driverlib\m0p\dl_systick.h \
-  ..\BSP\LED.h ..\BSP\Key.h ..\Core\Inc\WDT.h ..\BSP\OLED.h \
-  ..\SYSTEM\Delay.h ..\SYSTEM\SysClock.h ..\Core\Inc\UART.h \
-  ..\Core\Inc\Timer.h
+  ..\Core\Inc\Timer.h ..\SYSTEM\Delay.h
