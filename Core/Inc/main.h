@@ -8,6 +8,7 @@
 #include "SysClock.h"
 #include "UART.h"
 #include "Timer.h"
+#include "PWM.h"
 
 // ===== 用户定义的初始化入口 =====
 void System_Init(void)
@@ -17,6 +18,7 @@ void System_Init(void)
     DL_GPIO_reset(GPIOB);
     DL_GPIO_enablePower(GPIOA);
     DL_GPIO_enablePower(GPIOB);
+    delay_cycles(POWER_STARTUP_DELAY);
 
     // 2. 初始化系统时钟（SYSOSC / PLL）
     SysClock_init();   // 用户自定义的时钟配置函数，设置 MCLK、HSCLK 等
@@ -24,15 +26,20 @@ void System_Init(void)
     // 3. 初始化 GPIO 相关外设
     LED_Init();        // 配置 LED 输出 GPIO
     Key_Init();        // 配置按键输入 GPIO
-
     // 4. 上电并初始化定时器模块（必须顺序正确）
+    PWM0_PowerEnable();
+    // delay_cycles(POWER_STARTUP_DELAY);
+    PWM0_init();
+    
     DL_TimerA_reset(TIMA0);
     DL_TimerA_enablePower(TIMA0);
+    delay_cycles(POWER_STARTUP_DELAY);
     Timer0_init();     // 包含定时器的时钟配置、模式设置、启动等
 
     // 5. 上电并初始化 UART 串口
     DL_UART_Main_reset(UART0);
     DL_UART_Main_enablePower(UART0);
+    delay_cycles(POWER_STARTUP_DELAY);
     UART0_init();      // 包含波特率配置、中断设置等
 
     // 6. 上电并初始化 ADC（若使用）
@@ -63,6 +70,7 @@ void System_Init(void)
     // 11. 上电并初始化看门狗（若使用）
     DL_WWDT_reset(WWDT0);
     DL_WWDT_enablePower(WWDT0);
+    delay_cycles(POWER_STARTUP_DELAY);
     WDT_init();        // 设置溢出时间、中断响应等
 
     // 12. OLED 初始化（依赖 GPIO 和 I2C/SPI）
