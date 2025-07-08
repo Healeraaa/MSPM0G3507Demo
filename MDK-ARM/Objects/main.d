@@ -1,4 +1,5 @@
-./objects/main.o: ..\Core\Src\main.c ..\Core\Inc\ti_msp_dl_config.h \
+./objects/main.o: ..\Core\Src\main.c ..\Core\Inc\main.h \
+  ..\Core\Inc\ti_msp_dl_config.h \
   D:\ti\mspm0_sdk_2_05_00_05\source\ti\devices\msp\msp.h \
   D:\ti\mspm0_sdk_2_05_00_05\source\ti\devices\DeviceFamily.h \
   D:\ti\mspm0_sdk_2_05_00_05\source\ti\devices\msp\m0p\mspm0g350x.h \

@@ -1,72 +1,51 @@
-#include "ti_msp_dl_config.h"
-#include <stdio.h>
-#include "LED.h"
-#include "Key.h"
-#include "WDT.h"
-#include "OLED.h"
-#include "Delay.h"
-#include "SysClock.h"
-#include "UART.h"
-#include "Timer.h"
+#include "main.h"
 
 uint8_t gEchoData = 0;
 
 int main(void)
 {
     uint8_t Key_Num = 0;
-
-    /* Power on GPIO, initialize pins as digital outputs */
-    SYSCFG_DL_initPower();
-    SysClock_init();
-
-
-    LED_Init();
-    Key_Init();
-    WDT_init();
-    OLED_Init();
-    UART0_init();
-    Timer0_init();
-    Delay_ms(500);
+    System_Init();
 
     OLED_ShowString(1, 1, "Hello");
     LED2_ON();
     while (1)
     {
         // OLED_ShowString(1,1,"Hello");
-        // Key_Num = Key_GetNum();
-        // if (Key_Num == 1)
-        // {
-        //     LED2_ON();
-        // }
-        // else if (Key_Num == 2)
-        // {
-        //     LED3_ON();
-        // }
-        // else if (Key_Num == 3)
-        // {
-        //     LED4_ON();
-        // }
-        // else if (Key_Num == 4)
-        // {
-        //     LED2_ON();
-        //     LED3_ON();
-        // }
-        // else if (Key_Num == 5)
-        // {
-        //     LED3_ON();
-        //     LED4_ON();
-        // }
-        // else
-        // {
-        //     LED2_OFF();
-        //     LED3_OFF();
-        //     LED4_OFF();
-        // }
+        Key_Num = Key_GetNum();
+        if (Key_Num == 1)
+        {
+            LED2_ON();
+        }
+        else if (Key_Num == 2)
+        {
+            LED3_ON();
+        }
+        else if (Key_Num == 3)
+        {
+            LED4_ON();
+        }
+        else if (Key_Num == 4)
+        {
+            LED2_ON();
+            LED3_ON();
+        }
+        else if (Key_Num == 5)
+        {
+            LED3_ON();
+            LED4_ON();
+        }
+        else
+        {
+            // LED2_OFF();
+            LED3_OFF();
+            LED4_OFF();
+        }
         // LED2_Turn();
         // LED3_Turn();
         // LED4_Turn();
         DL_UART_Main_transmitData(UART_0_INST, 0xA5);
-        // printf("Hello\r\n");
+
         Delay_ms(500);
     }
 }

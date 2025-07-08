@@ -10,7 +10,8 @@
             "timer.h": "c",
             "ti_msp_dl_config.h": "c",
             "sysclock.h": "c",
-            "delay.h": "c"
+            "delay.h": "c",
+            "main.h": "c"
         }
     },
     "extensions": {}

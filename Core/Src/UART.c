@@ -2,7 +2,7 @@
 #include "UART.h"
 #include "Delay.h"
 // #include <stdarg.h>
-#include <stdio.h>
+// #include <stdio.h>
 // #include <string.h>
 
 
@@ -54,7 +54,7 @@ void UART0_init(void)
 }
 
 
-int fputc(int _c, FILE *_fp) {
-  DL_UART_Main_transmitDataBlocking(UART_0_INST, _c);
-  return _c;
-}
+// int fputc(int _c, FILE *_fp) {
+//   DL_UART_Main_transmitDataBlocking(UART_0_INST, _c);
+//   return _c;
+// }
