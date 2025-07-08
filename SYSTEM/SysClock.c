@@ -18,31 +18,51 @@ static const DL_SYSCTL_SYSPLLConfig gSYSPLLConfig = {
 
 void SysClock_init(void)
 {
-  DL_GPIO_reset(GPIOA);
-  DL_GPIO_enablePower(GPIOA);
-  delay_cycles(POWER_STARTUP_DELAY);
+  // DL_GPIO_reset(GPIOA);
+  // DL_GPIO_enablePower(GPIOA);
+  // delay_cycles(POWER_STARTUP_DELAY);
 
   // 配置高频晶振引脚为模拟功能
   DL_GPIO_initPeripheralAnalogFunction(GPIO_HFXIN_IOMUX);
   DL_GPIO_initPeripheralAnalogFunction(GPIO_HFXOUT_IOMUX);
 
-  // 设置低功耗模式为 SLEEP0 模式
+  // 设置 BOR（Brown-Out Reset，掉电复位）阈值为最低等级（LEVEL_0）；电压低于此值时芯片自动复位
   DL_SYSCTL_setBORThreshold(DL_SYSCTL_BOR_THRESHOLD_LEVEL_0);
-  // DL_SYSCTL_setFlashWaitState(DL_SYSCTL_FLASH_WAIT_STATE_2); // 配置 Flash 等待周期
-
-  DL_SYSCTL_setSYSOSCFreq(DL_SYSCTL_SYSOSC_FREQ_BASE); // 设置系统振荡器频率
-  DL_SYSCTL_disableHFXT();                             // 禁用外部高频晶振
-  DL_SYSCTL_disableSYSPLL();                           // 禁用系统 PLL
-
-  // 配置 HFXT 参数：范围32~48MHz，不启用 Bypass
-  DL_SYSCTL_setHFCLKSourceHFXTParams(DL_SYSCTL_HFXT_RANGE_32_48_MHZ, 0, false);
-
-  // 应用 PLL 配置
-  DL_SYSCTL_configSYSPLL((DL_SYSCTL_SYSPLLConfig *)&gSYSPLLConfig);
-
-  // 设置低功耗时钟 ULP 分频器为 2
+  // 设置 Flash 的等待周期为 2 个周期（适应高主频访问）
+  DL_SYSCTL_setFlashWaitState(DL_SYSCTL_FLASH_WAIT_STATE_2);
+  // 设置内部系统振荡器频率为默认基准频率（通常为 4 MHz）
+  DL_SYSCTL_setSYSOSCFreq(DL_SYSCTL_SYSOSC_FREQ_BASE);
+  // 禁用外部高频晶振（HFXT），初始化前应先关闭
+  DL_SYSCTL_disableHFXT();
+  // 禁用系统 PLL（锁相环），重新配置前必须关闭
+  DL_SYSCTL_disableSYSPLL();
+  // 配置 HFXT（高频晶振）参数：- 频率范围为 32–48MH - 超时周期数为 100（决定等待时长） - 启用 bypass 模式（true 表示绕过晶振电路，直接使用输入）
+  DL_SYSCTL_setHFCLKSourceHFXTParams(DL_SYSCTL_HFXT_RANGE_32_48_MHZ, 100, true);
+  // 配置 SYSPLL（锁相环）相关分频器、输入源等
+  DL_SYSCTL_configSYSPLL((DL_SYSCTL_SYSPLLConfig *) &gSYSPLLConfig);
+  // 设置 ULPCLK（超低功耗时钟）分频系数为 2
   DL_SYSCTL_setULPCLKDivider(DL_SYSCTL_ULPCLK_DIV_2);
-
-  // 设置主系统时钟来源为 SYSPLL
+  // 设置主时钟 MCLK 的来源为： SYSOSC（内部系统振荡器） → HSCLK → SYSPLL 输出
   DL_SYSCTL_setMCLKSource(SYSOSC, HSCLK, DL_SYSCTL_HSCLK_SOURCE_SYSPLL);
+  // 轮询等待以下所有系统时钟源都进入“GOOD”（就绪）状态：
+  // - SYSPLL（锁相环）
+  // - HFCLK（高频主时钟，通常是 HFXT 或 SYSPLL 输出）
+  // - HSCLK（高速度时钟，即 MCLK 经过分频后的结果）
+  // - LFOSC（低频内部振荡器）
+  while ((DL_SYSCTL_getClockStatus() & (
+            DL_SYSCTL_CLK_STATUS_SYSPLL_GOOD |
+            DL_SYSCTL_CLK_STATUS_HFCLK_GOOD   |
+            DL_SYSCTL_CLK_STATUS_HSCLK_GOOD   |
+            DL_SYSCTL_CLK_STATUS_LFOSC_GOOD)) 
+          != (
+            DL_SYSCTL_CLK_STATUS_SYSPLL_GOOD |
+            DL_SYSCTL_CLK_STATUS_HFCLK_GOOD   |
+            DL_SYSCTL_CLK_STATUS_HSCLK_GOOD   |
+            DL_SYSCTL_CLK_STATUS_LFOSC_GOOD))
+  {
+      // 等待直到所有时钟都稳定（否则系统时钟切换可能出错）
+
+      //  注意：一旦启用 LFXT（外部低频晶振），内部 LFOSC 会自动关闭，
+      // 且无法重新打开，除非执行一次完整的引导复位（BOOTRST）
+  }
 }

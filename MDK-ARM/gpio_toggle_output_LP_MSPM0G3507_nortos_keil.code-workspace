@@ -11,7 +11,9 @@
             "ti_msp_dl_config.h": "c",
             "sysclock.h": "c",
             "delay.h": "c",
-            "main.h": "c"
+            "main.h": "c",
+            "pwm.h": "c",
+            "stdio.h": "c"
         }
     },
     "extensions": {}

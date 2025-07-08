@@ -8,7 +8,8 @@ int main(void)
     System_Init();
 
     OLED_ShowString(1, 1, "Hello");
-    LED2_ON();
+    // LED2_ON();
+    PWM0_Set(70);
     while (1)
     {
         // OLED_ShowString(1,1,"Hello");
@@ -44,7 +45,8 @@ int main(void)
         // LED2_Turn();
         // LED3_Turn();
         // LED4_Turn();
-        DL_UART_Main_transmitData(UART_0_INST, 0xA5);
+        // DL_UART_Main_transmitData(UART_0_INST, 0xA5);
+        printf("Hello!\r\n");
 
         Delay_ms(500);
     }
@@ -77,7 +79,6 @@ void UART_0_INST_IRQHandler(void)
         break;
     }
 }
-
 
 void TIMER_0_INST_IRQHandler(void)
 {
