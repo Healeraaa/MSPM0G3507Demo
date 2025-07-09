@@ -7,46 +7,54 @@ int main(void)
     uint8_t Key_Num = 0;
     System_Init();
 
-    OLED_ShowString(1, 1, "Hello");
+    OLED_ShowString(1, 1, "Hello World");
     // LED2_ON();
     PWM0_Set(70);
     while (1)
     {
         // OLED_ShowString(1,1,"Hello");
-        Key_Num = Key_GetNum();
-        if (Key_Num == 1)
+        // Key_Num = Key_GetNum();
+        // if (Key_Num == 1)
+        // {
+        //     LED2_ON();
+        // }
+        // else if (Key_Num == 2)
+        // {
+        //     LED3_ON();
+        // }
+        // else if (Key_Num == 3)
+        // {
+        //     LED4_ON();
+        // }
+        // else if (Key_Num == 4)
+        // {
+        //     LED2_ON();
+        //     LED3_ON();
+        // }
+        // else if (Key_Num == 5)
+        // {
+        //     LED3_ON();
+        //     LED4_ON();
+        // }
+        // else
+        // {
+        //     // LED2_OFF();
+        //     LED3_OFF();
+        //     LED4_OFF();
+        // }
+        // // LED2_Turn();
+        // // LED3_Turn();
+        // // LED4_Turn();
+        // // DL_UART_Main_transmitData(UART_0_INST, 0xA5);
+        // printf("Hello!\r\n");
+
+
+        printf("Start AD Convert!\r\n");
+        ADC_DMA_Convert();
+        for(uint16_t i = 0;i < ADC_SAMPLE_SIZE;i++)
         {
-            LED2_ON();
+            printf("%d is %d\r\n",i,ADCValue[i]);
         }
-        else if (Key_Num == 2)
-        {
-            LED3_ON();
-        }
-        else if (Key_Num == 3)
-        {
-            LED4_ON();
-        }
-        else if (Key_Num == 4)
-        {
-            LED2_ON();
-            LED3_ON();
-        }
-        else if (Key_Num == 5)
-        {
-            LED3_ON();
-            LED4_ON();
-        }
-        else
-        {
-            // LED2_OFF();
-            LED3_OFF();
-            LED4_OFF();
-        }
-        // LED2_Turn();
-        // LED3_Turn();
-        // LED4_Turn();
-        // DL_UART_Main_transmitData(UART_0_INST, 0xA5);
-        printf("Hello!\r\n");
 
         Delay_ms(500);
     }
