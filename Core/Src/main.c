@@ -10,6 +10,7 @@ int main(void)
     OLED_ShowString(1, 1, "Hello World");
     // LED2_ON();
     PWM0_Set(70);
+    DAC_Set(3000);
     while (1)
     {
         // OLED_ShowString(1,1,"Hello");
@@ -49,12 +50,12 @@ int main(void)
         // printf("Hello!\r\n");
 
 
-        printf("Start AD Convert!\r\n");
-        ADC_DMA_Convert();
-        for(uint16_t i = 0;i < ADC_SAMPLE_SIZE;i++)
-        {
-            printf("%d is %d\r\n",i,ADCValue[i]);
-        }
+        // printf("Start AD Convert!\r\n");
+        // ADC_DMA_Convert();
+        // for(uint16_t i = 0;i < ADC_SAMPLE_SIZE;i++)
+        // {
+        //     printf("%d is %d\r\n",i,ADCValue[i]);
+        // }
 
         Delay_ms(500);
     }

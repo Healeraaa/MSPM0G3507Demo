@@ -6,14 +6,11 @@
     ],
     "settings": {
         "files.associations": {
-            "uart.h": "c",
-            "timer.h": "c",
-            "ti_msp_dl_config.h": "c",
+            "dac.h": "c",
             "sysclock.h": "c",
-            "delay.h": "c",
+            "ti_msp_dl_config.h": "c",
             "main.h": "c",
-            "pwm.h": "c",
-            "stdio.h": "c",
+            "delay.h": "c",
             "adc.h": "c",
             "dma.h": "c"
         }

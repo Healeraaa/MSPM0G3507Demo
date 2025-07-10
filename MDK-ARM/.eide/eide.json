@@ -41,6 +41,21 @@
                   },
                   {
                     "path": "../Core/Src/UART.c"
+                  },
+                  {
+                    "path": "../Core/Src/Timer.c"
+                  },
+                  {
+                    "path": "../Core/Src/PWM.c"
+                  },
+                  {
+                    "path": "../Core/Src/ADC.c"
+                  },
+                  {
+                    "path": "../Core/Src/DMA.c"
+                  },
+                  {
+                    "path": "../Core/Src/DAC.c"
                   }
                 ],
                 "folders": []
@@ -497,7 +512,8 @@
             }
           ]
         },
-        "options": "null"
+        "options": "null",
+        "archExtensions": ""
       },
       "uploader": "JLink",
       "uploadConfig": {
@@ -542,7 +558,7 @@
           ],
           "afterBuildTasks": [],
           "global": {
-            "use-microLIB": false,
+            "use-microLIB": true,
             "output-debug-info": "enable"
           },
           "c/cpp-compiler": {
@@ -568,5 +584,5 @@
       }
     }
   },
-  "version": "3.5"
+  "version": "3.6"
 }

@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\Project.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\Project.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6220000: Last Updated: Wed Jul  9 16:12:02 2025
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6220000: Last Updated: Thu Jul 10 13:16:56 2025
 <BR><P>
 <H3>Maximum Stack Usage =        120 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -52,7 +52,6 @@ Function Pointers
  <LI><a href="#[11]">UART2_IRQHandler</a> from startup_mspm0g350x_uvision.o(.text) referenced from startup_mspm0g350x_uvision.o(RESET)
  <LI><a href="#[9]">UART3_IRQHandler</a> from startup_mspm0g350x_uvision.o(.text) referenced from startup_mspm0g350x_uvision.o(RESET)
  <LI><a href="#[1f]">__main</a> from entry.o(.ARM.Collect$$$$00000000) referenced from startup_mspm0g350x_uvision.o(.text)
- <LI><a href="#[20]">fputc</a> from uart.o(.text.fputc) referenced from printf1.o(i.__0printf$1)
  <LI><a href="#[1e]">main</a> from main.o(.text.main) referenced from entry9a.o(.ARM.Collect$$$$0000000B)
 </UL>
 <P>
@@ -62,25 +61,25 @@ Global Symbols
 <P><STRONG><a name="[1f]"></a>__main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry.o(.ARM.Collect$$$$00000000))
 <BR>[Address Reference Count : 1]<UL><LI> startup_mspm0g350x_uvision.o(.text)
 </UL>
-<P><STRONG><a name="[52]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
+<P><STRONG><a name="[4e]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
 
-<P><STRONG><a name="[21]"></a>_main_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
-<BR><BR>[Calls]<UL><LI><a href="#[22]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
+<P><STRONG><a name="[20]"></a>_main_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
+<BR><BR>[Calls]<UL><LI><a href="#[21]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
-<P><STRONG><a name="[24]"></a>__main_after_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
-<BR><BR>[Called By]<UL><LI><a href="#[22]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
+<P><STRONG><a name="[23]"></a>__main_after_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
+<BR><BR>[Called By]<UL><LI><a href="#[21]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
-<P><STRONG><a name="[53]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
+<P><STRONG><a name="[4f]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
 
-<P><STRONG><a name="[54]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
+<P><STRONG><a name="[50]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
 
-<P><STRONG><a name="[55]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
+<P><STRONG><a name="[51]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
 
-<P><STRONG><a name="[56]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000D))
+<P><STRONG><a name="[52]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000D))
 
-<P><STRONG><a name="[57]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$0000000F))
+<P><STRONG><a name="[53]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$0000000F))
 
 <P><STRONG><a name="[0]"></a>Reset_Handler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, startup_mspm0g350x_uvision.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_mspm0g350x_uvision.o(RESET)
@@ -135,10 +134,10 @@ Global Symbols
 <P><STRONG><a name="[1d]"></a>DMA_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_mspm0g350x_uvision.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_mspm0g350x_uvision.o(RESET)
 </UL>
-<P><STRONG><a name="[23]"></a>Default_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, startup_mspm0g350x_uvision.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[23]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Default_Handler
+<P><STRONG><a name="[22]"></a>Default_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, startup_mspm0g350x_uvision.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[22]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Default_Handler
 </UL>
-<BR>[Called By]<UL><LI><a href="#[23]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Default_Handler
+<BR>[Called By]<UL><LI><a href="#[22]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Default_Handler
 </UL>
 
 <P><STRONG><a name="[7]"></a>GROUP1_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_mspm0g350x_uvision.o(.text))
@@ -186,288 +185,317 @@ Global Symbols
 <P><STRONG><a name="[9]"></a>UART3_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_mspm0g350x_uvision.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_mspm0g350x_uvision.o(RESET)
 </UL>
-<P><STRONG><a name="[35]"></a>__aeabi_uidiv</STRONG> (Thumb, 0 bytes, Stack size 16 bytes, uidiv_div0.o(.text))
+<P><STRONG><a name="[36]"></a>__aeabi_uidiv</STRONG> (Thumb, 0 bytes, Stack size 16 bytes, uidiv_div0.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = __aeabi_uidiv
 </UL>
-<BR>[Called By]<UL><LI><a href="#[34]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWM0_Set
+<BR>[Called By]<UL><LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWM0_Set
 </UL>
 
-<P><STRONG><a name="[51]"></a>__aeabi_uidivmod</STRONG> (Thumb, 62 bytes, Stack size 16 bytes, uidiv_div0.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
+<P><STRONG><a name="[54]"></a>__aeabi_uidivmod</STRONG> (Thumb, 62 bytes, Stack size 16 bytes, uidiv_div0.o(.text), UNUSED)
+
+<P><STRONG><a name="[21]"></a>__scatterload</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, init.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[23]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main_after_scatterload
+</UL>
+<BR>[Called By]<UL><LI><a href="#[20]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_main_scatterload
 </UL>
 
-<P><STRONG><a name="[22]"></a>__scatterload</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, init.o(.text))
-<BR><BR>[Calls]<UL><LI><a href="#[24]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main_after_scatterload
-</UL>
-<BR>[Called By]<UL><LI><a href="#[21]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_main_scatterload
-</UL>
+<P><STRONG><a name="[55]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
 
-<P><STRONG><a name="[58]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
-
-<P><STRONG><a name="[25]"></a>ADC0_init</STRONG> (Thumb, 144 bytes, Stack size 16 bytes, adc.o(.text.ADC0_init))
+<P><STRONG><a name="[24]"></a>ADC0_init</STRONG> (Thumb, 144 bytes, Stack size 16 bytes, adc.o(.text.ADC0_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = ADC0_init &rArr; DL_ADC12_setClockConfig
 </UL>
-<BR>[Calls]<UL><LI><a href="#[26]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_ADC12_setClockConfig
+<BR>[Calls]<UL><LI><a href="#[25]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_ADC12_setClockConfig
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<BR>[Called By]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;System_Init
 </UL>
 
 <P><STRONG><a name="[b]"></a>ADC1_IRQHandler</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, adc.o(.text.ADC1_IRQHandler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_mspm0g350x_uvision.o(RESET)
 </UL>
-<P><STRONG><a name="[4d]"></a>ADC_DMA_Convert</STRONG> (Thumb, 76 bytes, Stack size 0 bytes, adc.o(.text.ADC_DMA_Convert))
+<P><STRONG><a name="[4d]"></a>DAC_Set</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, dac.o(.text.DAC_Set))
 <BR><BR>[Called By]<UL><LI><a href="#[1e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[26]"></a>DL_ADC12_setClockConfig</STRONG> (Thumb, 56 bytes, Stack size 16 bytes, dl_adc12.o(.text.DL_ADC12_setClockConfig))
+<P><STRONG><a name="[26]"></a>DAC_init</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, dac.o(.text.DAC_init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = DAC_init &rArr; DL_DAC12_init
+</UL>
+<BR>[Calls]<UL><LI><a href="#[27]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_DAC12_init
+</UL>
+<BR>[Called By]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;System_Init
+</UL>
+
+<P><STRONG><a name="[25]"></a>DL_ADC12_setClockConfig</STRONG> (Thumb, 56 bytes, Stack size 16 bytes, dl_adc12.o(.text.DL_ADC12_setClockConfig))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = DL_ADC12_setClockConfig
 </UL>
-<BR>[Called By]<UL><LI><a href="#[25]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC0_init
+<BR>[Called By]<UL><LI><a href="#[24]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC0_init
 </UL>
 
-<P><STRONG><a name="[2a]"></a>DL_Common_delayCycles</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, dl_common.o(.text.DL_Common_delayCycles))
-<BR><BR>[Called By]<UL><LI><a href="#[29]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay_ms
-<LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_initPower
-<LI><a href="#[2b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay_us
+<P><STRONG><a name="[2b]"></a>DL_Common_delayCycles</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, dl_common.o(.text.DL_Common_delayCycles))
+<BR><BR>[Called By]<UL><LI><a href="#[2a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay_ms
+<LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_initPower
+<LI><a href="#[2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay_us
 </UL>
 
-<P><STRONG><a name="[3c]"></a>DL_DMA_initChannel</STRONG> (Thumb, 64 bytes, Stack size 16 bytes, dl_dma.o(.text.DL_DMA_initChannel))
+<P><STRONG><a name="[27]"></a>DL_DAC12_init</STRONG> (Thumb, 108 bytes, Stack size 16 bytes, dl_dac12.o(.text.DL_DAC12_init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = DL_DAC12_init
+</UL>
+<BR>[Called By]<UL><LI><a href="#[26]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DAC_init
+</UL>
+
+<P><STRONG><a name="[3d]"></a>DL_DMA_initChannel</STRONG> (Thumb, 64 bytes, Stack size 16 bytes, dl_dma.o(.text.DL_DMA_initChannel))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = DL_DMA_initChannel
 </UL>
-<BR>[Called By]<UL><LI><a href="#[28]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_DMA_CH0_init
+<BR>[Called By]<UL><LI><a href="#[29]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_DMA_CH0_init
 </UL>
 
-<P><STRONG><a name="[40]"></a>DL_SYSCTL_configSYSPLL</STRONG> (Thumb, 196 bytes, Stack size 36 bytes, dl_sysctl_mspm0g1x0x_g3x0x.o(.text.DL_SYSCTL_configSYSPLL))
+<P><STRONG><a name="[41]"></a>DL_SYSCTL_configSYSPLL</STRONG> (Thumb, 196 bytes, Stack size 36 bytes, dl_sysctl_mspm0g1x0x_g3x0x.o(.text.DL_SYSCTL_configSYSPLL))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = DL_SYSCTL_configSYSPLL
 </UL>
-<BR>[Called By]<UL><LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysClock_init
+<BR>[Called By]<UL><LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysClock_init
 </UL>
 
-<P><STRONG><a name="[3f]"></a>DL_SYSCTL_setHFCLKSourceHFXTParams</STRONG> (Thumb, 80 bytes, Stack size 20 bytes, dl_sysctl_mspm0g1x0x_g3x0x.o(.text.DL_SYSCTL_setHFCLKSourceHFXTParams))
+<P><STRONG><a name="[40]"></a>DL_SYSCTL_setHFCLKSourceHFXTParams</STRONG> (Thumb, 80 bytes, Stack size 20 bytes, dl_sysctl_mspm0g1x0x_g3x0x.o(.text.DL_SYSCTL_setHFCLKSourceHFXTParams))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = DL_SYSCTL_setHFCLKSourceHFXTParams
 </UL>
-<BR>[Called By]<UL><LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysClock_init
+<BR>[Called By]<UL><LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysClock_init
 </UL>
 
-<P><STRONG><a name="[41]"></a>DL_SYSCTL_switchMCLKfromSYSOSCtoHSCLK</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, dl_sysctl_mspm0g1x0x_g3x0x.o(.text.DL_SYSCTL_switchMCLKfromSYSOSCtoHSCLK))
-<BR><BR>[Called By]<UL><LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysClock_init
+<P><STRONG><a name="[42]"></a>DL_SYSCTL_switchMCLKfromSYSOSCtoHSCLK</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, dl_sysctl_mspm0g1x0x_g3x0x.o(.text.DL_SYSCTL_switchMCLKfromSYSOSCtoHSCLK))
+<BR><BR>[Called By]<UL><LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysClock_init
 </UL>
 
-<P><STRONG><a name="[39]"></a>DL_Timer_initFourCCPWMMode</STRONG> (Thumb, 256 bytes, Stack size 28 bytes, dl_timer.o(.text.DL_Timer_initFourCCPWMMode))
+<P><STRONG><a name="[3a]"></a>DL_Timer_initFourCCPWMMode</STRONG> (Thumb, 256 bytes, Stack size 28 bytes, dl_timer.o(.text.DL_Timer_initFourCCPWMMode))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = DL_Timer_initFourCCPWMMode
 </UL>
-<BR>[Called By]<UL><LI><a href="#[37]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWM0_init
+<BR>[Called By]<UL><LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWM0_init
 </UL>
 
-<P><STRONG><a name="[44]"></a>DL_Timer_initTimerMode</STRONG> (Thumb, 224 bytes, Stack size 16 bytes, dl_timer.o(.text.DL_Timer_initTimerMode))
+<P><STRONG><a name="[4a]"></a>DL_Timer_initTimerMode</STRONG> (Thumb, 224 bytes, Stack size 16 bytes, dl_timer.o(.text.DL_Timer_initTimerMode))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = DL_Timer_initTimerMode
 </UL>
-<BR>[Called By]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer0_init
+<BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer0_init
 </UL>
 
-<P><STRONG><a name="[3b]"></a>DL_Timer_setCaptCompUpdateMethod</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, dl_timer.o(.text.DL_Timer_setCaptCompUpdateMethod))
+<P><STRONG><a name="[3c]"></a>DL_Timer_setCaptCompUpdateMethod</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, dl_timer.o(.text.DL_Timer_setCaptCompUpdateMethod))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = DL_Timer_setCaptCompUpdateMethod
 </UL>
-<BR>[Called By]<UL><LI><a href="#[37]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWM0_init
+<BR>[Called By]<UL><LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWM0_init
 </UL>
 
-<P><STRONG><a name="[3a]"></a>DL_Timer_setCaptureCompareOutCtl</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, dl_timer.o(.text.DL_Timer_setCaptureCompareOutCtl))
+<P><STRONG><a name="[3b]"></a>DL_Timer_setCaptureCompareOutCtl</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, dl_timer.o(.text.DL_Timer_setCaptureCompareOutCtl))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = DL_Timer_setCaptureCompareOutCtl
 </UL>
-<BR>[Called By]<UL><LI><a href="#[37]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWM0_init
+<BR>[Called By]<UL><LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWM0_init
 </UL>
 
-<P><STRONG><a name="[36]"></a>DL_Timer_setCaptureCompareValue</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, dl_timer.o(.text.DL_Timer_setCaptureCompareValue))
-<BR><BR>[Called By]<UL><LI><a href="#[34]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWM0_Set
-<LI><a href="#[37]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWM0_init
+<P><STRONG><a name="[37]"></a>DL_Timer_setCaptureCompareValue</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, dl_timer.o(.text.DL_Timer_setCaptureCompareValue))
+<BR><BR>[Called By]<UL><LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWM0_Set
+<LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWM0_init
 </UL>
 
-<P><STRONG><a name="[38]"></a>DL_Timer_setClockConfig</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, dl_timer.o(.text.DL_Timer_setClockConfig))
+<P><STRONG><a name="[39]"></a>DL_Timer_setClockConfig</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, dl_timer.o(.text.DL_Timer_setClockConfig))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = DL_Timer_setClockConfig
 </UL>
-<BR>[Called By]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer0_init
-<LI><a href="#[37]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWM0_init
+<BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer0_init
+<LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWM0_init
 </UL>
 
-<P><STRONG><a name="[47]"></a>DL_UART_init</STRONG> (Thumb, 64 bytes, Stack size 16 bytes, dl_uart.o(.text.DL_UART_init))
+<P><STRONG><a name="[4c]"></a>DL_UART_init</STRONG> (Thumb, 64 bytes, Stack size 16 bytes, dl_uart.o(.text.DL_UART_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = DL_UART_init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART0_init
+<BR>[Called By]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART0_init
 </UL>
 
-<P><STRONG><a name="[46]"></a>DL_UART_setClockConfig</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, dl_uart.o(.text.DL_UART_setClockConfig))
+<P><STRONG><a name="[4b]"></a>DL_UART_setClockConfig</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, dl_uart.o(.text.DL_UART_setClockConfig))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = DL_UART_setClockConfig
 </UL>
-<BR>[Called By]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART0_init
+<BR>[Called By]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART0_init
 </UL>
 
-<P><STRONG><a name="[48]"></a>DL_UART_transmitDataBlocking</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, dl_uart.o(.text.DL_UART_transmitDataBlocking))
-<BR><BR>[Called By]<UL><LI><a href="#[20]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fputc
-</UL>
-
-<P><STRONG><a name="[27]"></a>DMA_init</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, dma.o(.text.DMA_init))
+<P><STRONG><a name="[28]"></a>DMA_init</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, dma.o(.text.DMA_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = DMA_init &rArr; SYSCFG_DL_DMA_CH0_init &rArr; DL_DMA_initChannel
 </UL>
-<BR>[Calls]<UL><LI><a href="#[28]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_DMA_CH0_init
+<BR>[Calls]<UL><LI><a href="#[29]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_DMA_CH0_init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<BR>[Called By]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;System_Init
 </UL>
 
-<P><STRONG><a name="[29]"></a>Delay_ms</STRONG> (Thumb, 24 bytes, Stack size 16 bytes, delay.o(.text.Delay_ms))
+<P><STRONG><a name="[2a]"></a>Delay_ms</STRONG> (Thumb, 24 bytes, Stack size 16 bytes, delay.o(.text.Delay_ms))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = Delay_ms
 </UL>
-<BR>[Calls]<UL><LI><a href="#[2a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Common_delayCycles
+<BR>[Calls]<UL><LI><a href="#[2b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Common_delayCycles
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;System_Init
 </UL>
 
-<P><STRONG><a name="[2b]"></a>Delay_us</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, delay.o(.text.Delay_us))
+<P><STRONG><a name="[2c]"></a>Delay_us</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, delay.o(.text.Delay_us))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Delay_us
 </UL>
-<BR>[Calls]<UL><LI><a href="#[2a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Common_delayCycles
+<BR>[Calls]<UL><LI><a href="#[2b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Common_delayCycles
 </UL>
-<BR>[Called By]<UL><LI><a href="#[31]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Init
-<LI><a href="#[2f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_WriteData
-<LI><a href="#[2e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_WriteCommand
-<LI><a href="#[30]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_I2C_SendByte
+<BR>[Called By]<UL><LI><a href="#[32]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Init
+<LI><a href="#[30]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_WriteData
+<LI><a href="#[2f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_WriteCommand
+<LI><a href="#[31]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_I2C_SendByte
 </UL>
 
 <P><STRONG><a name="[6]"></a>GROUP0_IRQHandler</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, main.o(.text.GROUP0_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = GROUP0_IRQHandler &rArr; Key_Update
 </UL>
-<BR>[Calls]<UL><LI><a href="#[2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Key_Update
+<BR>[Calls]<UL><LI><a href="#[2d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Key_Update
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_mspm0g350x_uvision.o(RESET)
 </UL>
-<P><STRONG><a name="[4a]"></a>Key_Init</STRONG> (Thumb, 76 bytes, Stack size 8 bytes, key.o(.text.Key_Init))
+<P><STRONG><a name="[45]"></a>Key_Init</STRONG> (Thumb, 76 bytes, Stack size 8 bytes, key.o(.text.Key_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Key_Init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<BR>[Called By]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;System_Init
 </UL>
 
-<P><STRONG><a name="[2c]"></a>Key_Update</STRONG> (Thumb, 232 bytes, Stack size 16 bytes, key.o(.text.Key_Update))
+<P><STRONG><a name="[2d]"></a>Key_Update</STRONG> (Thumb, 232 bytes, Stack size 16 bytes, key.o(.text.Key_Update))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = Key_Update
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GROUP0_IRQHandler
 </UL>
 
-<P><STRONG><a name="[42]"></a>LED2_Turn</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, led.o(.text.LED2_Turn))
+<P><STRONG><a name="[49]"></a>LED2_Turn</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, led.o(.text.LED2_Turn))
 <BR><BR>[Called By]<UL><LI><a href="#[15]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMA0_IRQHandler
 </UL>
 
-<P><STRONG><a name="[49]"></a>LED_Init</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, led.o(.text.LED_Init))
-<BR><BR>[Called By]<UL><LI><a href="#[1e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<P><STRONG><a name="[44]"></a>LED_Init</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, led.o(.text.LED_Init))
+<BR><BR>[Called By]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;System_Init
 </UL>
 
-<P><STRONG><a name="[2d]"></a>OLED_Clear</STRONG> (Thumb, 276 bytes, Stack size 16 bytes, oled.o(.text.OLED_Clear))
+<P><STRONG><a name="[2e]"></a>OLED_Clear</STRONG> (Thumb, 276 bytes, Stack size 16 bytes, oled.o(.text.OLED_Clear))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = OLED_Clear &rArr; OLED_WriteData &rArr; OLED_I2C_SendByte &rArr; Delay_us
 </UL>
-<BR>[Calls]<UL><LI><a href="#[2f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_WriteData
-<LI><a href="#[2e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_WriteCommand
+<BR>[Calls]<UL><LI><a href="#[30]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_WriteData
+<LI><a href="#[2f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_WriteCommand
 </UL>
-<BR>[Called By]<UL><LI><a href="#[31]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Init
+<BR>[Called By]<UL><LI><a href="#[32]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Init
 </UL>
 
-<P><STRONG><a name="[30]"></a>OLED_I2C_SendByte</STRONG> (Thumb, 324 bytes, Stack size 32 bytes, oled.o(.text.OLED_I2C_SendByte))
+<P><STRONG><a name="[31]"></a>OLED_I2C_SendByte</STRONG> (Thumb, 324 bytes, Stack size 32 bytes, oled.o(.text.OLED_I2C_SendByte))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = OLED_I2C_SendByte &rArr; Delay_us
 </UL>
-<BR>[Calls]<UL><LI><a href="#[2b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay_us
+<BR>[Calls]<UL><LI><a href="#[2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay_us
 </UL>
-<BR>[Called By]<UL><LI><a href="#[2f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_WriteData
-<LI><a href="#[2e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_WriteCommand
+<BR>[Called By]<UL><LI><a href="#[30]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_WriteData
+<LI><a href="#[2f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_WriteCommand
 </UL>
 
-<P><STRONG><a name="[31]"></a>OLED_Init</STRONG> (Thumb, 184 bytes, Stack size 16 bytes, oled.o(.text.OLED_Init))
+<P><STRONG><a name="[32]"></a>OLED_Init</STRONG> (Thumb, 184 bytes, Stack size 16 bytes, oled.o(.text.OLED_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = OLED_Init &rArr; OLED_Clear &rArr; OLED_WriteData &rArr; OLED_I2C_SendByte &rArr; Delay_us
 </UL>
-<BR>[Calls]<UL><LI><a href="#[2d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Clear
-<LI><a href="#[2e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_WriteCommand
-<LI><a href="#[2b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay_us
+<BR>[Calls]<UL><LI><a href="#[2e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Clear
+<LI><a href="#[2f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_WriteCommand
+<LI><a href="#[2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay_us
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<BR>[Called By]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;System_Init
 </UL>
 
-<P><STRONG><a name="[32]"></a>OLED_ShowChar</STRONG> (Thumb, 188 bytes, Stack size 32 bytes, oled.o(.text.OLED_ShowChar))
+<P><STRONG><a name="[33]"></a>OLED_ShowChar</STRONG> (Thumb, 188 bytes, Stack size 32 bytes, oled.o(.text.OLED_ShowChar))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = OLED_ShowChar &rArr; OLED_WriteData &rArr; OLED_I2C_SendByte &rArr; Delay_us
 </UL>
-<BR>[Calls]<UL><LI><a href="#[2f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_WriteData
-<LI><a href="#[2e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_WriteCommand
+<BR>[Calls]<UL><LI><a href="#[30]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_WriteData
+<LI><a href="#[2f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_WriteCommand
 </UL>
-<BR>[Called By]<UL><LI><a href="#[33]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_ShowString
+<BR>[Called By]<UL><LI><a href="#[34]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_ShowString
 </UL>
 
-<P><STRONG><a name="[33]"></a>OLED_ShowString</STRONG> (Thumb, 44 bytes, Stack size 24 bytes, oled.o(.text.OLED_ShowString))
+<P><STRONG><a name="[34]"></a>OLED_ShowString</STRONG> (Thumb, 44 bytes, Stack size 24 bytes, oled.o(.text.OLED_ShowString))
 <BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = OLED_ShowString &rArr; OLED_ShowChar &rArr; OLED_WriteData &rArr; OLED_I2C_SendByte &rArr; Delay_us
 </UL>
-<BR>[Calls]<UL><LI><a href="#[32]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_ShowChar
+<BR>[Calls]<UL><LI><a href="#[33]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_ShowChar
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[2e]"></a>OLED_WriteCommand</STRONG> (Thumb, 92 bytes, Stack size 24 bytes, oled.o(.text.OLED_WriteCommand))
+<P><STRONG><a name="[2f]"></a>OLED_WriteCommand</STRONG> (Thumb, 92 bytes, Stack size 24 bytes, oled.o(.text.OLED_WriteCommand))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = OLED_WriteCommand &rArr; OLED_I2C_SendByte &rArr; Delay_us
 </UL>
-<BR>[Calls]<UL><LI><a href="#[30]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_I2C_SendByte
-<LI><a href="#[2b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay_us
+<BR>[Calls]<UL><LI><a href="#[31]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_I2C_SendByte
+<LI><a href="#[2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay_us
 </UL>
-<BR>[Called By]<UL><LI><a href="#[31]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Init
-<LI><a href="#[32]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_ShowChar
-<LI><a href="#[2d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Clear
+<BR>[Called By]<UL><LI><a href="#[32]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Init
+<LI><a href="#[33]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_ShowChar
+<LI><a href="#[2e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Clear
 </UL>
 
-<P><STRONG><a name="[2f]"></a>OLED_WriteData</STRONG> (Thumb, 92 bytes, Stack size 24 bytes, oled.o(.text.OLED_WriteData))
+<P><STRONG><a name="[30]"></a>OLED_WriteData</STRONG> (Thumb, 92 bytes, Stack size 24 bytes, oled.o(.text.OLED_WriteData))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = OLED_WriteData &rArr; OLED_I2C_SendByte &rArr; Delay_us
 </UL>
-<BR>[Calls]<UL><LI><a href="#[30]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_I2C_SendByte
-<LI><a href="#[2b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay_us
+<BR>[Calls]<UL><LI><a href="#[31]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_I2C_SendByte
+<LI><a href="#[2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay_us
 </UL>
-<BR>[Called By]<UL><LI><a href="#[32]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_ShowChar
-<LI><a href="#[2d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Clear
+<BR>[Called By]<UL><LI><a href="#[33]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_ShowChar
+<LI><a href="#[2e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Clear
 </UL>
 
-<P><STRONG><a name="[34]"></a>PWM0_Set</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, pwm.o(.text.PWM0_Set))
+<P><STRONG><a name="[35]"></a>PWM0_Set</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, pwm.o(.text.PWM0_Set))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = PWM0_Set &rArr; __aeabi_uidiv
 </UL>
-<BR>[Calls]<UL><LI><a href="#[36]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_setCaptureCompareValue
-<LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidiv
+<BR>[Calls]<UL><LI><a href="#[37]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_setCaptureCompareValue
+<LI><a href="#[36]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidiv
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[37]"></a>PWM0_init</STRONG> (Thumb, 100 bytes, Stack size 24 bytes, pwm.o(.text.PWM0_init))
+<P><STRONG><a name="[38]"></a>PWM0_init</STRONG> (Thumb, 100 bytes, Stack size 24 bytes, pwm.o(.text.PWM0_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = PWM0_init &rArr; DL_Timer_initFourCCPWMMode
 </UL>
-<BR>[Calls]<UL><LI><a href="#[36]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_setCaptureCompareValue
-<LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_setCaptCompUpdateMethod
-<LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_setCaptureCompareOutCtl
-<LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_initFourCCPWMMode
-<LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_setClockConfig
+<BR>[Calls]<UL><LI><a href="#[37]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_setCaptureCompareValue
+<LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_setCaptCompUpdateMethod
+<LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_setCaptureCompareOutCtl
+<LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_initFourCCPWMMode
+<LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_setClockConfig
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<BR>[Called By]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;System_Init
 </UL>
 
-<P><STRONG><a name="[28]"></a>SYSCFG_DL_DMA_CH0_init</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, dma.o(.text.SYSCFG_DL_DMA_CH0_init))
+<P><STRONG><a name="[29]"></a>SYSCFG_DL_DMA_CH0_init</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, dma.o(.text.SYSCFG_DL_DMA_CH0_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = SYSCFG_DL_DMA_CH0_init &rArr; DL_DMA_initChannel
 </UL>
-<BR>[Calls]<UL><LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_DMA_initChannel
+<BR>[Calls]<UL><LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_DMA_initChannel
 </UL>
-<BR>[Called By]<UL><LI><a href="#[27]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_init
+<BR>[Called By]<UL><LI><a href="#[28]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_init
 </UL>
 
-<P><STRONG><a name="[3d]"></a>SYSCFG_DL_initPower</STRONG> (Thumb, 60 bytes, Stack size 24 bytes, ti_msp_dl_config.o(.text.SYSCFG_DL_initPower))
+<P><STRONG><a name="[3e]"></a>SYSCFG_DL_initPower</STRONG> (Thumb, 72 bytes, Stack size 24 bytes, ti_msp_dl_config.o(.text.SYSCFG_DL_initPower))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = SYSCFG_DL_initPower
 </UL>
-<BR>[Calls]<UL><LI><a href="#[2a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Common_delayCycles
+<BR>[Calls]<UL><LI><a href="#[2b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Common_delayCycles
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<BR>[Called By]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;System_Init
 </UL>
 
-<P><STRONG><a name="[3e]"></a>SysClock_init</STRONG> (Thumb, 128 bytes, Stack size 16 bytes, sysclock.o(.text.SysClock_init))
-<BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = SysClock_init &rArr; DL_SYSCTL_configSYSPLL
+<P><STRONG><a name="[3f]"></a>SysClock_init</STRONG> (Thumb, 144 bytes, Stack size 24 bytes, sysclock.o(.text.SysClock_init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 60<LI>Call Chain = SysClock_init &rArr; DL_SYSCTL_configSYSPLL
 </UL>
-<BR>[Calls]<UL><LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_SYSCTL_switchMCLKfromSYSOSCtoHSCLK
-<LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_SYSCTL_configSYSPLL
-<LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_SYSCTL_setHFCLKSourceHFXTParams
+<BR>[Calls]<UL><LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_SYSCTL_switchMCLKfromSYSOSCtoHSCLK
+<LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_SYSCTL_configSYSPLL
+<LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_SYSCTL_setHFCLKSourceHFXTParams
+</UL>
+<BR>[Called By]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;System_Init
+</UL>
+
+<P><STRONG><a name="[43]"></a>System_Init</STRONG> (Thumb, 58 bytes, Stack size 8 bytes, main.o(.text.System_Init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = System_Init &rArr; OLED_Init &rArr; OLED_Clear &rArr; OLED_WriteData &rArr; OLED_I2C_SendByte &rArr; Delay_us
+</UL>
+<BR>[Calls]<UL><LI><a href="#[2a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay_ms
+<LI><a href="#[32]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Init
+<LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WDT_init
+<LI><a href="#[26]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DAC_init
+<LI><a href="#[28]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_init
+<LI><a href="#[24]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC0_init
+<LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART0_init
+<LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer0_init
+<LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWM0_init
+<LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Key_Init
+<LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_Init
+<LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysClock_init
+<LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_initPower
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -475,102 +503,55 @@ Global Symbols
 <P><STRONG><a name="[15]"></a>TIMA0_IRQHandler</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, main.o(.text.TIMA0_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = TIMA0_IRQHandler
 </UL>
-<BR>[Calls]<UL><LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED2_Turn
+<BR>[Calls]<UL><LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED2_Turn
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_mspm0g350x_uvision.o(RESET)
 </UL>
-<P><STRONG><a name="[43]"></a>Timer0_init</STRONG> (Thumb, 52 bytes, Stack size 8 bytes, timer.o(.text.Timer0_init))
+<P><STRONG><a name="[46]"></a>Timer0_init</STRONG> (Thumb, 52 bytes, Stack size 8 bytes, timer.o(.text.Timer0_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = Timer0_init &rArr; DL_Timer_initTimerMode
 </UL>
-<BR>[Calls]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_initTimerMode
-<LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_setClockConfig
+<BR>[Calls]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_initTimerMode
+<LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_setClockConfig
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<BR>[Called By]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;System_Init
 </UL>
 
 <P><STRONG><a name="[12]"></a>UART0_IRQHandler</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, main.o(.text.UART0_IRQHandler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_mspm0g350x_uvision.o(RESET)
 </UL>
-<P><STRONG><a name="[45]"></a>UART0_init</STRONG> (Thumb, 140 bytes, Stack size 8 bytes, uart.o(.text.UART0_init))
+<P><STRONG><a name="[47]"></a>UART0_init</STRONG> (Thumb, 140 bytes, Stack size 8 bytes, uart.o(.text.UART0_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = UART0_init &rArr; DL_UART_init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_UART_init
-<LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_UART_setClockConfig
+<BR>[Calls]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_UART_init
+<LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_UART_setClockConfig
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-</UL>
-
-<P><STRONG><a name="[4b]"></a>WDT_init</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, wdt.o(.text.WDT_init))
-<BR><BR>[Called By]<UL><LI><a href="#[1e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<BR>[Called By]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;System_Init
 </UL>
 
-<P><STRONG><a name="[20]"></a>fputc</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, uart.o(.text.fputc))
-<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = fputc
+<P><STRONG><a name="[48]"></a>WDT_init</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, wdt.o(.text.WDT_init))
+<BR><BR>[Called By]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;System_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_UART_transmitDataBlocking
-</UL>
-<BR>[Called By]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;puts
-</UL>
-<BR>[Address Reference Count : 1]<UL><LI> printf1.o(i.__0printf$1)
-</UL>
-<P><STRONG><a name="[1e]"></a>main</STRONG> (Thumb, 112 bytes, Stack size 0 bytes, main.o(.text.main))
+
+<P><STRONG><a name="[1e]"></a>main</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, main.o(.text.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = main &rArr; OLED_ShowString &rArr; OLED_ShowChar &rArr; OLED_WriteData &rArr; OLED_I2C_SendByte &rArr; Delay_us
 </UL>
-<BR>[Calls]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_DMA_Convert
-<LI><a href="#[34]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWM0_Set
-<LI><a href="#[33]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_ShowString
-<LI><a href="#[29]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay_ms
-<LI><a href="#[31]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Init
-<LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WDT_init
-<LI><a href="#[27]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_init
-<LI><a href="#[25]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC0_init
-<LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART0_init
-<LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer0_init
-<LI><a href="#[37]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWM0_init
-<LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Key_Init
-<LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_Init
-<LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysClock_init
-<LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_initPower
-<LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;puts
-<LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<BR>[Calls]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DAC_Set
+<LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWM0_Set
+<LI><a href="#[34]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_ShowString
+<LI><a href="#[2a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay_ms
+<LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;System_Init
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
 </UL>
-<P><STRONG><a name="[4f]"></a>__0printf$1</STRONG> (Thumb, 24 bytes, Stack size 24 bytes, printf1.o(i.__0printf$1), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
-</UL>
+<P><STRONG><a name="[56]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
 
-<P><STRONG><a name="[59]"></a>__1printf$1</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printf1.o(i.__0printf$1), UNUSED)
+<P><STRONG><a name="[57]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
 
-<P><STRONG><a name="[4e]"></a>__2printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printf1.o(i.__0printf$1))
-<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = __2printf
-</UL>
-<BR>[Called By]<UL><LI><a href="#[1e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-</UL>
-
-<P><STRONG><a name="[5a]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
-
-<P><STRONG><a name="[5b]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
-
-<P><STRONG><a name="[5c]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
-
-<P><STRONG><a name="[4c]"></a>puts</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, puts.o(i.puts))
-<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = puts &rArr; fputc
-</UL>
-<BR>[Calls]<UL><LI><a href="#[20]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fputc
-</UL>
-<BR>[Called By]<UL><LI><a href="#[1e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-</UL>
+<P><STRONG><a name="[58]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
 <P>
 <H3>
 Local Symbols
-</H3>
-<P><STRONG><a name="[50]"></a>_printf_core</STRONG> (Thumb, 332 bytes, Stack size 88 bytes, printf1.o(i._printf_core), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
-</UL>
-<BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__0printf$1
-</UL>
-<P>
+</H3><P>
 <H3>
 Undefined Global Symbols
 </H3><HR></body></html>

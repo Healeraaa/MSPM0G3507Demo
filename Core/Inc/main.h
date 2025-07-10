@@ -11,6 +11,7 @@
 #include "PWM.h"
 #include "ADC.h"
 #include "DMA.h"
+#include "DAC.h"
 
 // ===== 用户定义的初始化入口 =====
 void System_Init(void)
@@ -24,6 +25,7 @@ void System_Init(void)
     UART0_init();      // 包含波特率配置、中断设置等
     ADC0_init();
     DMA_init();
+    DAC_init();
     WDT_init();        // 设置溢出时间、中断响应等
     OLED_Init();       // OLED 显示驱动初始化（建议延后）
     Delay_ms(200);     // 具体时间视硬件情况而定
