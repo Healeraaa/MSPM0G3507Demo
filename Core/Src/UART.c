@@ -4,6 +4,7 @@
 // #include <stdarg.h>
 #include <stdio.h>
 // #include <string.h>
+#include "SysClock.h"
 
 
 // 串口时钟配置结构体：使用 BUSCLK，分频为1
@@ -24,19 +25,53 @@ static const DL_UART_Main_Config gUART_0Config = {
 
 
 
-void UART0_init(void)
+// void UART0_init(void)
+// {
+
+
+//     // 配置 UART TX 为外设输出，RX 为外设输入
+//     DL_GPIO_initPeripheralOutputFunction(GPIO_UART_0_IOMUX_TX, GPIO_UART_0_IOMUX_TX_FUNC);
+//     DL_GPIO_initPeripheralInputFunction(GPIO_UART_0_IOMUX_RX, GPIO_UART_0_IOMUX_RX_FUNC);
+//     DL_UART_Main_setClockConfig(UART_0_INST, (DL_UART_Main_ClockConfig *) &gUART_0ClockConfig);
+//     DL_UART_Main_init(UART_0_INST, (DL_UART_Main_Config *) &gUART_0Config);
+
+//     // 配置波特率为 115200（实际为 115190.78）
+//     DL_UART_Main_setOversampling(UART_0_INST, DL_UART_OVERSAMPLING_RATE_16X);
+//     DL_UART_Main_setBaudRateDivisor(UART_0_INST, UART_0_IBRD_40_MHZ_115200_BAUD, UART_0_FBRD_40_MHZ_115200_BAUD);
+
+//     // 开启 UART 接收中断
+//     DL_UART_Main_enableInterrupt(UART_0_INST, DL_UART_MAIN_INTERRUPT_RX);
+
+//     // 启用 FIFO 并设置阈值
+//     DL_UART_Main_enableFIFOs(UART_0_INST);
+//     DL_UART_Main_setRXFIFOThreshold(UART_0_INST, DL_UART_RX_FIFO_LEVEL_1_2_FULL);
+//     DL_UART_Main_setTXFIFOThreshold(UART_0_INST, DL_UART_TX_FIFO_LEVEL_1_2_EMPTY);
+
+//     DL_UART_Main_enable(UART_0_INST); // 使能 UART
+
+//     NVIC_ClearPendingIRQ(UART_0_INST_INT_IRQN);
+//     NVIC_EnableIRQ(UART_0_INST_INT_IRQN);
+// }
+
+/**
+ * @brief    UART0初始化，可设置波特率
+ * @param    baudrate  期望波特率（如115200）
+ * @retval   无
+ */
+void UART0_init(uint32_t baudrate)
 {
-
-
     // 配置 UART TX 为外设输出，RX 为外设输入
     DL_GPIO_initPeripheralOutputFunction(GPIO_UART_0_IOMUX_TX, GPIO_UART_0_IOMUX_TX_FUNC);
     DL_GPIO_initPeripheralInputFunction(GPIO_UART_0_IOMUX_RX, GPIO_UART_0_IOMUX_RX_FUNC);
     DL_UART_Main_setClockConfig(UART_0_INST, (DL_UART_Main_ClockConfig *) &gUART_0ClockConfig);
     DL_UART_Main_init(UART_0_INST, (DL_UART_Main_Config *) &gUART_0Config);
 
-    // 配置波特率为 115200（实际为 115190.78）
+    // 配置波特率
     DL_UART_Main_setOversampling(UART_0_INST, DL_UART_OVERSAMPLING_RATE_16X);
-    DL_UART_Main_setBaudRateDivisor(UART_0_INST, UART_0_IBRD_40_MHZ_115200_BAUD, UART_0_FBRD_40_MHZ_115200_BAUD);
+    uint32_t uart_clk = BUSCLK_FREQ / (gUART_0ClockConfig.divideRatio + 1);
+    uint32_t ibrd = uart_clk / (16 * baudrate);
+    uint32_t fbrd = ((uart_clk % (16 * baudrate)) * 64 + (baudrate / 2)) / baudrate;
+    DL_UART_Main_setBaudRateDivisor(UART_0_INST, ibrd, fbrd);
 
     // 开启 UART 接收中断
     DL_UART_Main_enableInterrupt(UART_0_INST, DL_UART_MAIN_INTERRUPT_RX);
@@ -50,8 +85,8 @@ void UART0_init(void)
 
     NVIC_ClearPendingIRQ(UART_0_INST_INT_IRQN);
     NVIC_EnableIRQ(UART_0_INST_INT_IRQN);
-
 }
+
 
 
 int fputc(int _c, FILE *_fp) {

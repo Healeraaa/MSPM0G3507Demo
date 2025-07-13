@@ -72,4 +72,4 @@
   D:\ti\mspm0_sdk_2_05_00_05\source\ti\driverlib\dl_wwdt.h \
   D:\ti\mspm0_sdk_2_05_00_05\source\ti\driverlib\m0p\dl_interrupt.h \
   D:\ti\mspm0_sdk_2_05_00_05\source\ti\driverlib\m0p\dl_systick.h \
-  ..\Core\Inc\UART.h ..\SYSTEM\Delay.h
+  ..\Core\Inc\UART.h ..\SYSTEM\Delay.h ..\SYSTEM\SysClock.h

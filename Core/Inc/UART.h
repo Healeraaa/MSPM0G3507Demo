@@ -25,7 +25,7 @@
 #define UART_0_FBRD_40_MHZ_115200_BAUD (45)
 
 
-void UART0_init(void);
+void UART0_init(uint32_t baudrate);
 
 #endif
 

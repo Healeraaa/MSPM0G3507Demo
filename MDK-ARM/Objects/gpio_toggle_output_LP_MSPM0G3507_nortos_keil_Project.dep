@@ -2,9 +2,9 @@ Dependencies for Project 'gpio_toggle_output_LP_MSPM0G3507_nortos_keil', Target 
 CompilerVersion: 6220000::V6.22::ARMCLANG
 F (../gpio_toggle_output.syscfg)(0x68638AA3)()
 F (startup_mspm0g350x_uvision.s)(0x68691CF5)(--target=arm-arm-none-eabi -mcpu=cortex-m0plus -masm=auto  -Wa,armasm,--diag_suppress=A1950W -c-gdwarf-4 -Wa,armasm,--pd,"__MICROLIB SETA 1"-Wa,armasm,--pd,"__UVISION_VERSION SETA 541" -Wa,armasm,--pd,"__MSPM0G3507__ SETA 1"-o ./objects/startup_mspm0g350x_uvision.o)
-F (..\Core\Src\main.c)(0x686F4CC7)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I D:/ti/mspm0_sdk_2_05_00_05/source/third_party/CMSIS/Core/Include -I D:/ti/mspm0_sdk_2_05_00_05/source -I ../Core/Inc -I ../Core/Src -I ../BSP -I ../SYSTEM-D__UVISION_VERSION="541" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/main.o -MMD)
-I (..\Core\Inc\main.h)(0x686F4218)
-I (..\Core\Inc\ti_msp_dl_config.h)(0x686C7D4A)
+F (..\Core\Src\main.c)(0x687399B8)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I D:/ti/mspm0_sdk_2_05_00_05/source/third_party/CMSIS/Core/Include -I D:/ti/mspm0_sdk_2_05_00_05/source -I ../Core/Inc -I ../Core/Src -I ../BSP -I ../SYSTEM-D__UVISION_VERSION="541" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/main.o -MMD)
+I (..\Core\Inc\main.h)(0x68739AD7)
+I (..\Core\Inc\ti_msp_dl_config.h)(0x68736B09)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\devices\msp\msp.h)(0x6841E4A5)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\devices\DeviceFamily.h)(0x6841E4A5)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\devices\msp\m0p\mspm0g350x.h)(0x6841E4A5)
@@ -83,15 +83,15 @@ I (..\BSP\Key.h)(0x6864F362)
 I (..\Core\Inc\WDT.h)(0x68677449)
 I (..\BSP\OLED.h)(0x68650E97)
 I (..\SYSTEM\Delay.h)(0x686C7D20)
-I (..\SYSTEM\SysClock.h)(0x68676CAA)
-I (..\Core\Inc\UART.h)(0x686CF458)
-I (..\Core\Inc\Timer.h)(0x686C7341)
-I (..\Core\Inc\PWM.h)(0x686CF4C6)
-I (..\Core\Inc\ADC.h)(0x686E1AA0)
-I (..\Core\Inc\DMA.h)(0x686E17FD)
+I (..\SYSTEM\SysClock.h)(0x6873798C)
+I (..\Core\Inc\UART.h)(0x687377FC)
+I (..\Core\Inc\Timer.h)(0x687376A0)
+I (..\Core\Inc\PWM.h)(0x68737073)
+I (..\Core\Inc\ADC.h)(0x68739AB5)
+I (..\Core\Inc\DMA.h)(0x68739A9F)
 I (..\Core\Inc\DAC.h)(0x686F450C)
-F (..\Core\Src\ti_msp_dl_config.c)(0x686F263E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I D:/ti/mspm0_sdk_2_05_00_05/source/third_party/CMSIS/Core/Include -I D:/ti/mspm0_sdk_2_05_00_05/source -I ../Core/Inc -I ../Core/Src -I ../BSP -I ../SYSTEM-D__UVISION_VERSION="541" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/ti_msp_dl_config.o -MMD)
-I (..\Core\Inc\ti_msp_dl_config.h)(0x686C7D4A)
+F (..\Core\Src\ti_msp_dl_config.c)(0x68738A2A)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I D:/ti/mspm0_sdk_2_05_00_05/source/third_party/CMSIS/Core/Include -I D:/ti/mspm0_sdk_2_05_00_05/source -I ../Core/Inc -I ../Core/Src -I ../BSP -I ../SYSTEM-D__UVISION_VERSION="541" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/ti_msp_dl_config.o -MMD)
+I (..\Core\Inc\ti_msp_dl_config.h)(0x68736B09)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\devices\msp\msp.h)(0x6841E4A5)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\devices\DeviceFamily.h)(0x6841E4A5)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\devices\msp\m0p\mspm0g350x.h)(0x6841E4A5)
@@ -166,7 +166,7 @@ I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\driverlib\dl_wwdt.h)(0x6841E4A5)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\driverlib\m0p\dl_interrupt.h)(0x6841E4A5)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\driverlib\m0p\dl_systick.h)(0x6841E4A5)
 F (..\Core\Src\WDT.c)(0x686885FF)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I D:/ti/mspm0_sdk_2_05_00_05/source/third_party/CMSIS/Core/Include -I D:/ti/mspm0_sdk_2_05_00_05/source -I ../Core/Inc -I ../Core/Src -I ../BSP -I ../SYSTEM-D__UVISION_VERSION="541" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/wdt.o -MMD)
-I (..\Core\Inc\ti_msp_dl_config.h)(0x686C7D4A)
+I (..\Core\Inc\ti_msp_dl_config.h)(0x68736B09)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\devices\msp\msp.h)(0x6841E4A5)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\devices\DeviceFamily.h)(0x6841E4A5)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\devices\msp\m0p\mspm0g350x.h)(0x6841E4A5)
@@ -242,8 +242,8 @@ I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\driverlib\m0p\dl_interrupt.h)(0x6841E4A5
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\driverlib\m0p\dl_systick.h)(0x6841E4A5)
 I (..\Core\Inc\WDT.h)(0x68677449)
 I (..\SYSTEM\Delay.h)(0x686C7D20)
-F (..\Core\Src\UART.c)(0x686CF3A3)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I D:/ti/mspm0_sdk_2_05_00_05/source/third_party/CMSIS/Core/Include -I D:/ti/mspm0_sdk_2_05_00_05/source -I ../Core/Inc -I ../Core/Src -I ../BSP -I ../SYSTEM-D__UVISION_VERSION="541" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/uart.o -MMD)
-I (..\Core\Inc\ti_msp_dl_config.h)(0x686C7D4A)
+F (..\Core\Src\UART.c)(0x68737AAD)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I D:/ti/mspm0_sdk_2_05_00_05/source/third_party/CMSIS/Core/Include -I D:/ti/mspm0_sdk_2_05_00_05/source -I ../Core/Inc -I ../Core/Src -I ../BSP -I ../SYSTEM-D__UVISION_VERSION="541" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/uart.o -MMD)
+I (..\Core\Inc\ti_msp_dl_config.h)(0x68736B09)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\devices\msp\msp.h)(0x6841E4A5)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\devices\DeviceFamily.h)(0x6841E4A5)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\devices\msp\m0p\mspm0g350x.h)(0x6841E4A5)
@@ -317,10 +317,11 @@ I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\driverlib\dl_vref.h)(0x6841E4A5)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\driverlib\dl_wwdt.h)(0x6841E4A5)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\driverlib\m0p\dl_interrupt.h)(0x6841E4A5)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\driverlib\m0p\dl_systick.h)(0x6841E4A5)
-I (..\Core\Inc\UART.h)(0x686CF458)
+I (..\Core\Inc\UART.h)(0x687377FC)
 I (..\SYSTEM\Delay.h)(0x686C7D20)
-F (..\Core\Src\Timer.c)(0x686CB591)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I D:/ti/mspm0_sdk_2_05_00_05/source/third_party/CMSIS/Core/Include -I D:/ti/mspm0_sdk_2_05_00_05/source -I ../Core/Inc -I ../Core/Src -I ../BSP -I ../SYSTEM-D__UVISION_VERSION="541" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/timer.o -MMD)
-I (..\Core\Inc\ti_msp_dl_config.h)(0x686C7D4A)
+I (..\SYSTEM\SysClock.h)(0x6873798C)
+F (..\Core\Src\Timer.c)(0x687376ED)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I D:/ti/mspm0_sdk_2_05_00_05/source/third_party/CMSIS/Core/Include -I D:/ti/mspm0_sdk_2_05_00_05/source -I ../Core/Inc -I ../Core/Src -I ../BSP -I ../SYSTEM-D__UVISION_VERSION="541" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/timer.o -MMD)
+I (..\Core\Inc\ti_msp_dl_config.h)(0x68736B09)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\devices\msp\msp.h)(0x6841E4A5)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\devices\DeviceFamily.h)(0x6841E4A5)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\devices\msp\m0p\mspm0g350x.h)(0x6841E4A5)
@@ -394,10 +395,10 @@ I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\driverlib\dl_vref.h)(0x6841E4A5)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\driverlib\dl_wwdt.h)(0x6841E4A5)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\driverlib\m0p\dl_interrupt.h)(0x6841E4A5)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\driverlib\m0p\dl_systick.h)(0x6841E4A5)
-I (..\Core\Inc\Timer.h)(0x686C7341)
+I (..\Core\Inc\Timer.h)(0x687376A0)
 I (..\SYSTEM\Delay.h)(0x686C7D20)
-F (..\Core\Src\PWM.c)(0x686CF578)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I D:/ti/mspm0_sdk_2_05_00_05/source/third_party/CMSIS/Core/Include -I D:/ti/mspm0_sdk_2_05_00_05/source -I ../Core/Inc -I ../Core/Src -I ../BSP -I ../SYSTEM-D__UVISION_VERSION="541" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/pwm.o -MMD)
-I (..\Core\Inc\ti_msp_dl_config.h)(0x686C7D4A)
+F (..\Core\Src\PWM.c)(0x68737449)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I D:/ti/mspm0_sdk_2_05_00_05/source/third_party/CMSIS/Core/Include -I D:/ti/mspm0_sdk_2_05_00_05/source -I ../Core/Inc -I ../Core/Src -I ../BSP -I ../SYSTEM-D__UVISION_VERSION="541" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/pwm.o -MMD)
+I (..\Core\Inc\ti_msp_dl_config.h)(0x68736B09)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\devices\msp\msp.h)(0x6841E4A5)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\devices\DeviceFamily.h)(0x6841E4A5)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\devices\msp\m0p\mspm0g350x.h)(0x6841E4A5)
@@ -471,10 +472,11 @@ I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\driverlib\dl_vref.h)(0x6841E4A5)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\driverlib\dl_wwdt.h)(0x6841E4A5)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\driverlib\m0p\dl_interrupt.h)(0x6841E4A5)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\driverlib\m0p\dl_systick.h)(0x6841E4A5)
-I (..\Core\Inc\PWM.h)(0x686CF4C6)
+I (..\Core\Inc\PWM.h)(0x68737073)
 I (..\SYSTEM\Delay.h)(0x686C7D20)
-F (..\Core\Src\ADC.c)(0x686F2887)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I D:/ti/mspm0_sdk_2_05_00_05/source/third_party/CMSIS/Core/Include -I D:/ti/mspm0_sdk_2_05_00_05/source -I ../Core/Inc -I ../Core/Src -I ../BSP -I ../SYSTEM-D__UVISION_VERSION="541" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/adc.o -MMD)
-I (..\Core\Inc\ti_msp_dl_config.h)(0x686C7D4A)
+I (..\SYSTEM\SysClock.h)(0x6873798C)
+F (..\Core\Src\ADC.c)(0x68739AAA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I D:/ti/mspm0_sdk_2_05_00_05/source/third_party/CMSIS/Core/Include -I D:/ti/mspm0_sdk_2_05_00_05/source -I ../Core/Inc -I ../Core/Src -I ../BSP -I ../SYSTEM-D__UVISION_VERSION="541" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/adc.o -MMD)
+I (..\Core\Inc\ti_msp_dl_config.h)(0x68736B09)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\devices\msp\msp.h)(0x6841E4A5)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\devices\DeviceFamily.h)(0x6841E4A5)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\devices\msp\m0p\mspm0g350x.h)(0x6841E4A5)
@@ -548,11 +550,11 @@ I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\driverlib\dl_vref.h)(0x6841E4A5)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\driverlib\dl_wwdt.h)(0x6841E4A5)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\driverlib\m0p\dl_interrupt.h)(0x6841E4A5)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\driverlib\m0p\dl_systick.h)(0x6841E4A5)
-I (..\Core\Inc\ADC.h)(0x686E1AA0)
-I (..\Core\Inc\DMA.h)(0x686E17FD)
+I (..\Core\Inc\ADC.h)(0x68739AB5)
+I (..\Core\Inc\DMA.h)(0x68739A9F)
 I (..\SYSTEM\Delay.h)(0x686C7D20)
-F (..\Core\Src\DMA.c)(0x686E17EE)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I D:/ti/mspm0_sdk_2_05_00_05/source/third_party/CMSIS/Core/Include -I D:/ti/mspm0_sdk_2_05_00_05/source -I ../Core/Inc -I ../Core/Src -I ../BSP -I ../SYSTEM-D__UVISION_VERSION="541" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/dma.o -MMD)
-I (..\Core\Inc\ti_msp_dl_config.h)(0x686C7D4A)
+F (..\Core\Src\DMA.c)(0x68739A99)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I D:/ti/mspm0_sdk_2_05_00_05/source/third_party/CMSIS/Core/Include -I D:/ti/mspm0_sdk_2_05_00_05/source -I ../Core/Inc -I ../Core/Src -I ../BSP -I ../SYSTEM-D__UVISION_VERSION="541" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/dma.o -MMD)
+I (..\Core\Inc\ti_msp_dl_config.h)(0x68736B09)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\devices\msp\msp.h)(0x6841E4A5)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\devices\DeviceFamily.h)(0x6841E4A5)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\devices\msp\m0p\mspm0g350x.h)(0x6841E4A5)
@@ -626,10 +628,10 @@ I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\driverlib\dl_vref.h)(0x6841E4A5)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\driverlib\dl_wwdt.h)(0x6841E4A5)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\driverlib\m0p\dl_interrupt.h)(0x6841E4A5)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\driverlib\m0p\dl_systick.h)(0x6841E4A5)
-I (..\Core\Inc\DMA.h)(0x686E17FD)
+I (..\Core\Inc\DMA.h)(0x68739A9F)
 I (..\SYSTEM\Delay.h)(0x686C7D20)
-F (..\Core\Src\DAC.c)(0x686F4C96)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I D:/ti/mspm0_sdk_2_05_00_05/source/third_party/CMSIS/Core/Include -I D:/ti/mspm0_sdk_2_05_00_05/source -I ../Core/Inc -I ../Core/Src -I ../BSP -I ../SYSTEM-D__UVISION_VERSION="541" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/dac.o -MMD)
-I (..\Core\Inc\ti_msp_dl_config.h)(0x686C7D4A)
+F (..\Core\Src\DAC.c)(0x686F4D51)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I D:/ti/mspm0_sdk_2_05_00_05/source/third_party/CMSIS/Core/Include -I D:/ti/mspm0_sdk_2_05_00_05/source -I ../Core/Inc -I ../Core/Src -I ../BSP -I ../SYSTEM-D__UVISION_VERSION="541" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/dac.o -MMD)
+I (..\Core\Inc\ti_msp_dl_config.h)(0x68736B09)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\devices\msp\msp.h)(0x6841E4A5)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\devices\DeviceFamily.h)(0x6841E4A5)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\devices\msp\m0p\mspm0g350x.h)(0x6841E4A5)
@@ -1842,8 +1844,8 @@ I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\devices\msp\peripherals\m0p\hw_cpuss.h)(
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\devices\msp\peripherals\m0p\hw_debugss.h)(0x6841E4A5)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\devices\msp\peripherals\m0p\hw_sysctl.h)(0x6841E4A5)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\devices\msp\peripherals\m0p\sysctl\hw_sysctl_mspm0g1x0x_g3x0x.h)(0x6841E4A5)
-F (..\BSP\LED.c)(0x686885EB)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I D:/ti/mspm0_sdk_2_05_00_05/source/third_party/CMSIS/Core/Include -I D:/ti/mspm0_sdk_2_05_00_05/source -I ../Core/Inc -I ../Core/Src -I ../BSP -I ../SYSTEM-D__UVISION_VERSION="541" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/led.o -MMD)
-I (..\Core\Inc\ti_msp_dl_config.h)(0x686C7D4A)
+F (..\BSP\LED.c)(0x68736CB3)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I D:/ti/mspm0_sdk_2_05_00_05/source/third_party/CMSIS/Core/Include -I D:/ti/mspm0_sdk_2_05_00_05/source -I ../Core/Inc -I ../Core/Src -I ../BSP -I ../SYSTEM-D__UVISION_VERSION="541" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/led.o -MMD)
+I (..\Core\Inc\ti_msp_dl_config.h)(0x68736B09)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\devices\msp\msp.h)(0x6841E4A5)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\devices\DeviceFamily.h)(0x6841E4A5)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\devices\msp\m0p\mspm0g350x.h)(0x6841E4A5)
@@ -1921,7 +1923,7 @@ I (..\BSP\LED.h)(0x6864EA82)
 I (..\SYSTEM\Delay.h)(0x686C7D20)
 F (..\BSP\LED.h)(0x6864EA82)()
 F (..\BSP\Key.c)(0x686885F5)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I D:/ti/mspm0_sdk_2_05_00_05/source/third_party/CMSIS/Core/Include -I D:/ti/mspm0_sdk_2_05_00_05/source -I ../Core/Inc -I ../Core/Src -I ../BSP -I ../SYSTEM-D__UVISION_VERSION="541" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/key.o -MMD)
-I (..\Core\Inc\ti_msp_dl_config.h)(0x686C7D4A)
+I (..\Core\Inc\ti_msp_dl_config.h)(0x68736B09)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\devices\msp\msp.h)(0x6841E4A5)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\devices\DeviceFamily.h)(0x6841E4A5)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\devices\msp\m0p\mspm0g350x.h)(0x6841E4A5)
@@ -1999,7 +2001,7 @@ I (..\BSP\Key.h)(0x6864F362)
 I (..\SYSTEM\Delay.h)(0x686C7D20)
 F (..\BSP\Key.h)(0x6864F362)()
 F (..\BSP\OLED.c)(0x6868879F)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I D:/ti/mspm0_sdk_2_05_00_05/source/third_party/CMSIS/Core/Include -I D:/ti/mspm0_sdk_2_05_00_05/source -I ../Core/Inc -I ../Core/Src -I ../BSP -I ../SYSTEM-D__UVISION_VERSION="541" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/oled.o -MMD)
-I (..\Core\Inc\ti_msp_dl_config.h)(0x686C7D4A)
+I (..\Core\Inc\ti_msp_dl_config.h)(0x68736B09)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\devices\msp\msp.h)(0x6841E4A5)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\devices\DeviceFamily.h)(0x6841E4A5)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\devices\msp\m0p\mspm0g350x.h)(0x6841E4A5)
@@ -2077,7 +2079,7 @@ I (..\BSP\OLED_Font.h)(0x61683CCA)
 I (..\SYSTEM\Delay.h)(0x686C7D20)
 F (..\BSP\OLED_Font.h)(0x61683CCA)()
 F (..\SYSTEM\Delay.c)(0x686C7D2E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I D:/ti/mspm0_sdk_2_05_00_05/source/third_party/CMSIS/Core/Include -I D:/ti/mspm0_sdk_2_05_00_05/source -I ../Core/Inc -I ../Core/Src -I ../BSP -I ../SYSTEM-D__UVISION_VERSION="541" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/delay.o -MMD)
-I (..\Core\Inc\ti_msp_dl_config.h)(0x686C7D4A)
+I (..\Core\Inc\ti_msp_dl_config.h)(0x68736B09)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\devices\msp\msp.h)(0x6841E4A5)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\devices\DeviceFamily.h)(0x6841E4A5)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\devices\msp\m0p\mspm0g350x.h)(0x6841E4A5)
@@ -2152,9 +2154,9 @@ I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\driverlib\dl_wwdt.h)(0x6841E4A5)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\driverlib\m0p\dl_interrupt.h)(0x6841E4A5)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\driverlib\m0p\dl_systick.h)(0x6841E4A5)
 I (..\SYSTEM\Delay.h)(0x686C7D20)
-I (..\SYSTEM\SysClock.h)(0x68676CAA)
-F (..\SYSTEM\SysClock.c)(0x686F26FF)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I D:/ti/mspm0_sdk_2_05_00_05/source/third_party/CMSIS/Core/Include -I D:/ti/mspm0_sdk_2_05_00_05/source -I ../Core/Inc -I ../Core/Src -I ../BSP -I ../SYSTEM-D__UVISION_VERSION="541" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/sysclock.o -MMD)
-I (..\Core\Inc\ti_msp_dl_config.h)(0x686C7D4A)
+I (..\SYSTEM\SysClock.h)(0x6873798C)
+F (..\SYSTEM\SysClock.c)(0x68736C29)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I D:/ti/mspm0_sdk_2_05_00_05/source/third_party/CMSIS/Core/Include -I D:/ti/mspm0_sdk_2_05_00_05/source -I ../Core/Inc -I ../Core/Src -I ../BSP -I ../SYSTEM-D__UVISION_VERSION="541" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/sysclock.o -MMD)
+I (..\Core\Inc\ti_msp_dl_config.h)(0x68736B09)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\devices\msp\msp.h)(0x6841E4A5)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\devices\DeviceFamily.h)(0x6841E4A5)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\devices\msp\m0p\mspm0g350x.h)(0x6841E4A5)
@@ -2228,5 +2230,5 @@ I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\driverlib\dl_vref.h)(0x6841E4A5)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\driverlib\dl_wwdt.h)(0x6841E4A5)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\driverlib\m0p\dl_interrupt.h)(0x6841E4A5)
 I (D:\ti\mspm0_sdk_2_05_00_05\source\ti\driverlib\m0p\dl_systick.h)(0x6841E4A5)
-I (..\SYSTEM\SysClock.h)(0x68676CAA)
+I (..\SYSTEM\SysClock.h)(0x6873798C)
 I (..\SYSTEM\Delay.h)(0x686C7D20)

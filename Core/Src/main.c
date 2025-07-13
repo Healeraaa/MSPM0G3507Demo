@@ -50,12 +50,12 @@ int main(void)
         // printf("Hello!\r\n");
 
 
-        // printf("Start AD Convert!\r\n");
-        // ADC_DMA_Convert();
-        // for(uint16_t i = 0;i < ADC_SAMPLE_SIZE;i++)
-        // {
-        //     printf("%d is %d\r\n",i,ADCValue[i]);
-        // }
+        printf("Start AD Convert!\r\n");
+        ADC_DMA_Convert();
+        for(uint16_t i = 0;i < ADC_SAMPLE_SIZE;i++)
+        {
+            printf("%d is %d\r\n",i,ADCValue[i]);
+        }
 
         Delay_ms(500);
     }

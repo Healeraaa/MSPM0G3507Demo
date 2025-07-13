@@ -7,7 +7,7 @@
 #define TIMER_0_INST_LOAD_VALUE (49999U)
 
 
-void Timer0_init(void);
+void Timer0_init(DL_TIMER_CLOCK_DIVIDE divide, uint32_t prescale, uint32_t period);
 
 #endif
 

@@ -20,13 +20,15 @@ void System_Init(void)
     SysClock_init();   // 用户自定义的时钟配置函数，设置 MCLK、HSCLK 等
     LED_Init();        // 配置 LED 输出 GPIO
     Key_Init();        // 配置按键输入 GPIO
-    PWM0_init();
-    Timer0_init();     // 包含定时器的时钟配置、模式设置、启动等
-    UART0_init();      // 包含波特率配置、中断设置等
+    PWM0_init(500,20); // 初始化 PWM0，设置频率为 2000Hz，占空比为 70%
+    Timer0_init(DL_TIMER_CLOCK_DIVIDE_8, 100-1, 50000-1); // 初始化定时器0，分频系数为8，预分频100，周期500ms
+    UART0_init(9600);      // 包含波特率配置、中断设置等
     ADC0_init();
     DMA_init();
+
+
     DAC_init();
     WDT_init();        // 设置溢出时间、中断响应等
-    OLED_Init();       // OLED 显示驱动初始化（建议延后）
-    Delay_ms(200);     // 具体时间视硬件情况而定
+    OLED_Init();    
+    Delay_ms(200);     
 }

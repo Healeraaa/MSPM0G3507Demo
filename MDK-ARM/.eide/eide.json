@@ -537,6 +537,7 @@
           "../Core/Src",
           "../BSP",
           "../SYSTEM",
+          ".cmsis/include",
           "RTE/_Project"
         ],
         "libList": [],

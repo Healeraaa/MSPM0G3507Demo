@@ -8,6 +8,7 @@
 #define GPIO_HFXOUT_IOMUX (IOMUX_PINCM11)
 
 #define CPUCLK_FREQ 80000000 // 主系统时钟频率 80 MHz
+#define BUSCLK_FREQ 40000000 // 主系统时钟频率（Hz）
 
 void SysClock_init(void);
 
